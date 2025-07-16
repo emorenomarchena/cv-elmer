@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elmer Moreno - Especialista Cloud</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0a192f;
+            --secondary: #172a45;
+            --accent: #64ffda;
+            --text: #ccd6f6;
+            --light-text: #8892b0;
+            --white: #e6f1ff;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--primary);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            padding: 40px 0;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--accent);
+        }
+        
+        .logo span {
+            color: var(--white);
+        }
+        
+        .main-menu ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        .main-menu li {
+            margin-left: 40px;
+        }
+        
+        .main-menu a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .main-menu a:hover {
+            color: var(--accent);
+        }
+        
+        .main-menu a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            bottom: -5px;
+            left: 0;
+            transition: var(--transition);
+        }
+        
+        .main-menu a:hover:after {
+            width: 100%;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 100px 0;
+            position: relative;
+        }
+        
+        .hero-content {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+        
+        .hero-text {
+            flex: 1;
+        }
+        
+        .hero-image {
+            flex: 1;
+            position: relative;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 2px solid var(--accent);
+        }
+        
+        .greeting {
+            color: var(--accent);
+            font-size: 18px;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        
+        .name {
+            font-family: 'Playfair Display', serif;
+            font-size: 70px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            color: var(--white);
+        }
+        
+        .title {
+            font-size: 24px;
+            color: var(--light-text);
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+        
+        .description {
+            font-size: 16px;
+            color: var(--light-text);
+            margin-bottom: 40px;
+            max-width: 600px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: transparent;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background: rgba(100, 255, 218, 0.1);
+        }
+        
+        /* About Section */
+        .section {
+            padding: 100px 0;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 60px;
+            color: var(--white);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 60%;
+            height: 2px;
+            background: var(--accent);
+            bottom: -10px;
+            left: 0;
+        }
+        
+        .about-content {
+            display: flex;
+            gap: 60px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--light-text);
+            font-size: 16px;
+        }
+        
+        .skills {
+            flex: 1;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        
+        .skill-item {
+            background: var(--secondary);
+            padding: 20px;
+            border-radius: 5px;
+            transition: var(--transition);
+        }
+        
+        .skill-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .skill-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .skill-title i {
+            color: var(--accent);
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        
+        .skill-title h3 {
+            font-size: 18px;
+            font-weight: 500;
+        }
+        
+        .skill-description {
+            color: var(--light-text);
+            font-size: 14px;
+        }
+        
+        /* Experience Section */
+        .experience-tabs {
+            display: flex;
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--secondary);
+        }
+        
+        .tab-btn {
+            padding: 15px 25px;
+            background: transparent;
+            border: none;
+            color: var(--light-text);
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            position: relative;
+            transition: var(--transition);
+        }
+        
+        .tab-btn.active {
+            color: var(--accent);
+        }
+        
+        .tab-btn.active:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: var(--accent);
+            bottom: -1px;
+            left: 0;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .job {
+            margin-bottom: 40px;
+        }
+        
+        .job-title {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: var(--white);
+        }
+        
+        .job-company {
+            color: var(--accent);
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        
+        .job-date {
+            color: var(--light-text);
+            font-size: 14px;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .job-description {
+            color: var(--light-text);
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        
+        .job-responsibilities {
+            list-style: none;
+        }
+        
+        .job-responsibilities li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+            color: var(--light-text);
+            font-size: 15px;
+        }
+        
+        .job-responsibilities li:before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+        
+        /* Education Section */
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        
+        .education-item {
+            background: var(--secondary);
+            padding: 30px;
+            border-radius: 5px;
+            transition: var(--transition);
+        }
+        
+        .education-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .education-degree {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--white);
+        }
+        
+        .education-institution {
+            color: var(--accent);
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        
+        .education-date {
+            color: var(--light-text);
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        /* Certifications Section */
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .credential-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 15px;
+            background-color: rgba(100, 255, 218, 0.1);
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            border-radius: 4px;
+            font-size: 14px;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        .certification-item {
+            background: var(--secondary);
+            padding: 30px;
+            border-radius: 5px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        .credential-link:hover {
+            background-color: rgba(100, 255, 218, 0.2);
+            transform: translateY(-2px);
+        }
+        .certification-item:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 100%;
+            background: var(--accent);
+        }
+        
+        .certification-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .certification-name {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--white);
+        }
+        
+        .certification-issuer {
+            color: var(--accent);
+            font-size: 14px;
+        }
+        
+        /* Contact Section */
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            color: var(--accent);
+            font-size: 20px;
+        }
+        
+        .contact-text h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: var(--white);
+        }
+        
+        .contact-text a {
+            color: var(--light-text);
+            text-decoration: none;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+        
+        .contact-text a:hover {
+            color: var(--accent);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--secondary);
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .footer-text {
+            color: var(--light-text);
+            font-size: 14px;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero-content, .about-content {
+                flex-direction: column;
+            }
+            
+            .name {
+                font-size: 50px;
+            }
+            
+            .education-grid, .certifications-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .main-menu ul {
+                margin-top: 30px;
+                justify-content: center;
+            }
+            
+            .main-menu li {
+                margin: 0 15px;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Elmer <span>Moreno</span></div>
+                <nav class="main-menu">
+                    <ul>
+                        <li><a href="#about">Sobre mí</a></li>
+                        <li><a href="#experience">Experiencia</a></li>
+                        <li><a href="#education">Educación</a></li>
+                        <li><a href="#certifications">Certificaciones</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="greeting">Hola, soy</p>
+                    <h1 class="name">Elmer Santos Moreno Marchena</h1>
+                    <h2 class="title">Arquitecto de Soluciones Cloud</h2>
+                    <p class="description">Profesional especializado en soporte, implementación  y consultoría de infraestructuras y aplicaciones en la nube, comprometido con la excelencia y la innovación tecnológica.</p>
+                    <a href="#contact" class="btn">Contáctame</a>
+                </div>
+                <div class="hero-image">
+                    <img src="foto.JPG" alt="Elmer Moreno">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">Sobre mí</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Soy un profesional especializado en soporte, implementación  y consultoría de infraestructuras y aplicaciones en la nube, comprometido con la excelencia y la innovación tecnológica.</p>
+                    <p>Me definen el trabajo en equipo, la responsabilidad y la dedicación. Con una sólida experiencia en servicios cloud, enfoco mis esfuerzos en la mejora continua y la optimización de soluciones, impulsando el aprovechamiento estratégico de la tecnología para maximizar el valor de las plataformas en la nube.</p>
+                    <p>Mi experiencia abarca desde el diseño y la implementación de arquitecturas cloud hasta la gestión de equipos y proyectos tecnológicos, siempre con un enfoque en la creación de valor para el negocio.</p>
+                </div>
+                <div class="skills">
+                    <h3 style="font-size: 24px; margin-bottom: 30px; color: var(--white);">Habilidades técnicas</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-title">
+                                <i class="fab fa-microsoft"></i>
+                                <h3>Microsoft Azure</h3>
+                            </div>
+                            <p class="skill-description">Experto en implementación y gestión de soluciones en Azure, incluyendo IaaS, PaaS y SaaS.</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-title">
+                                <i class="fas fa-cloud"></i>
+                                <h3>Multi-Cloud</h3>
+                            </div>
+                            <p class="skill-description">Experiencia en AWS, Huawei Cloud, OCI y soluciones VMware para entornos híbridos.</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-title">
+                                <i class="fas fa-database"></i>
+                                <h3>Bases de Datos</h3>
+                            </div>
+                            <p class="skill-description">SQL Server, PostgreSQL, MySQL, CosmoDB y optimización de consultas.</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-title">
+                                <i class="fas fa-project-diagram"></i>
+                                <h3>DevOps</h3>
+                            </div>
+                            <p class="skill-description">Kubernetes, Docker, CI/CD pipelines y automatización de despliegues.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title">Experiencia</h2>
+            <div class="experience-tabs">
+                <button class="tab-btn active" data-tab="current">Actual</button>
+                <button class="tab-btn" data-tab="previous">Anterior</button>
+            </div>
+            
+            <div id="current" class="tab-content active">
+                <div class="job">
+                    <h3 class="job-title">Especialista Cloud & Data Center (Pre-Sales)</h3>
+                    <p class="job-company">Cliente: CLARO PERÚ</p>
+                    <span class="job-date">diciembre 2024 - Actualidad</span>
+                    <p class="job-description">Asesoría técnica y comercial de soluciones cloud para uno de los principales operadores de telecomunicaciones del Perú.</p>
+                    <ul class="job-responsibilities">
+                        <li>Asesoría técnica y comercial de productos de las nubes públicas y privadas como Microsoft Azure, AWS, Huawei Cloud, VMware y Housing & Hosting a medida en el DC TIER III de Claro.</li>
+                        <li>Elaboración de Oferta Técnica Económica (OTE) según necesidad del cliente.</li>
+                        <li>Acompañamiento en las implementaciones de arquitecturas IaaS y PaaS.</li>
+                        <li>Elaboración de pruebas de concepto (PoC) de productos Multi-Cloud y Data Center.</li>
+                    </ul>
+                </div>
+                
+                <div class="job">
+                    <h3 class="job-title">Cloud Specialist (ISX-System Expert - Engineering)</h3>
+                    <p class="job-company">NTT DATA PERÚ | Clientes: Telefónica del Perú y Credicorp</p>
+                    <span class="job-date">noviembre 2023 - diciembre 2024</span>
+                    <p class="job-description">Especialista en infraestructura cloud para importantes clientes corporativos.</p>
+                    <ul class="job-responsibilities">
+                        <li>Diagnóstico y resolución de problemas en la infraestructura de Microsoft Azure, asegurando la continuidad del servicio.</li>
+                        <li>Elaboración de informes de análisis de causa raíz (RCA) para incidentes críticos.</li>
+                        <li>Desarrollo de planes de trabajo detallados para la implementación de cambios en la infraestructura de Azure.</li>
+                        <li>Implementación de prácticas FinOps para optimizar el uso de recursos y reducir costos.</li>
+                        <li>Supervisión y análisis de la infraestructura de recursos de Azure mediante herramientas como Azure Dashboard, Grafana y New Relic.</li>
+                        <li>Configuración, administración y monitoreo de clústeres de Kubernetes en Azure.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div id="previous" class="tab-content">
+                <div class="job">
+                    <h3 class="job-title">Consultor Preventa Microsoft Cloud</h3>
+                    <p class="job-company">NEXSYS DEL PERÚ | Área: Microsoft</p>
+                    <span class="job-date">abril 2022 - noviembre 2023</span>
+                    <ul class="job-responsibilities">
+                        <li>Asesoría técnica y comercial de productos de Microsoft.</li>
+                        <li>Entrenamiento Técnico de productos de Microsoft Azure y Microsoft 365 a Socios comerciales.</li>
+                        <li>Elaboración de Workshop Técnicos.</li>
+                        <li>Elaboración y presentación de pruebas de concepto de productos Cloud de Microsoft.</li>
+                    </ul>
+                </div>
+                
+                <div class="job">
+                    <h3 class="job-title">Operador de servicios de TI</h3>
+                    <p class="job-company">SAPIA (STEFANINI IT SOLUTIONS PERU S.A.C.)| Cliente: Minera Buenaventura</p>
+                    <span class="job-date">julio 2021 - marzo 2022</span>
+                    <ul class="job-responsibilities">
+                        <li>Soporte y administración de Infraestructuras de servidores, red y base de datos.</li>
+                    </ul>
+                </div>
+                
+                <div class="job">
+                    <h3 class="job-title">Analista de Sistemas Informáticos</h3>
+                    <p class="job-company">INVERSIONES NUEVA CERAMICA SA</p>
+                    <span class="job-date">septiembre 2020 - enero 2021</span>
+                    <ul class="job-responsibilities">
+                        <li>Asistencia y soporte técnico de hardware, software y otros servicios tecnológicos.</li>
+                        <li>Administración de Infraestructura de red.</li>
+                        <li>Administración de servidores de aplicaciones y base de datos.</li>
+                    </ul>
+                </div>
+                
+                <div class="job">
+                    <h3 class="job-title">Supervisor de Soporte de Aplicaciones</h3>
+                    <p class="job-company">HITSS PERÚ S.A.C. | Cliente: América Móvil Perú SAC</p>
+                    <span class="job-date">mayo 2017 - junio 2020</span>
+                    <ul class="job-responsibilities">
+                        <li>Supervisión de soporte de mesa de ayuda de aplicaciones de entorno web y escritorio.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-title">Educación</h2>
+            <div class="education-grid">
+                <div class="education-item">
+                    <h3 class="education-degree">Ingeniería de Sistemas e Informática</h3>
+                    <p class="education-institution">Universidad Tecnológica del Perú</p>
+                    <span class="education-date">Bachiller</span>
+                </div>
+                <div class="education-item">
+                    <h3 class="education-degree">Computación Informática y Sistemas</h3>
+                    <p class="education-institution">GRUPO IDAT</p>
+                    <span class="education-date">Graduado (Técnico)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section">
+        <div class="container">
+            <h2 class="section-title">Certificaciones</h2>
+            <div class="certifications-grid">
+                <div class="certification-item">
+                    <h3 class="certification-name">AZ-305: Azure Solutions Architect Expert - EN PROCESO</h3>
+                    <p class="certification-issuer">Microsoft</p>
+                    <a href="https://learn.microsoft.com/en-us/credentials/certifications/exams/az-305/" 
+                   class="credential-link" 
+                   target="_blank">Proximamente</a>
+                </div>
+                <div class="certification-item">
+                    <h3 class="certification-name">AZ-104: Azure Administrator Associate</h3>
+                    <p class="certification-issuer">Microsoft</p>
+                    <a href="https://learn.microsoft.com/api/credentials/share/es-mx/ElmerMoreno/A1FB1DD4A08888C2?sharingId=121CD979E02EC18F" 
+                   class="credential-link" 
+                   target="_blank">Ver Credencial</a>
+                </div>
+                <div class="certification-item">
+                    <h3 class="certification-name">AZ-700: Azure Network Engineer Associate</h3>
+                    <p class="certification-issuer">Microsoft</p>
+                    <a href="https://learn.microsoft.com/api/credentials/share/es-mx/ElmerMoreno/D777B4BB4AD6DDE9?sharingId=121CD979E02EC18F" 
+                   class="credential-link" 
+                   target="_blank">Ver Credencial</a>
+                </div>
+                <div class="certification-item">
+                    <h3 class="certification-name">SC-300: Identity and Access Administrator</h3>
+                    <p class="certification-issuer">Microsoft</p>
+                    <a href="https://learn.microsoft.com/api/credentials/share/es-mx/ElmerMoreno/25AF42B4F7C14603?sharingId=121CD979E02EC18F" 
+                   class="credential-link" 
+                   target="_blank">Ver Credencial</a>
+                </div>
+                <div class="certification-item">
+                    <h3 class="certification-name">SC-900: Security, Compliance Fundamentals</h3>
+                    <p class="certification-issuer">Microsoft</p>
+                    <a href="https://learn.microsoft.com/api/credentials/share/es-mx/ElmerMoreno/CBEF4B23AD4C441A?sharingId=121CD979E02EC18F" 
+                   class="credential-link" 
+                   target="_blank">Ver Credencial</a>
+                </div>
+                <div class="certification-item">
+                    <h3 class="certification-name">DP-900: Azure Data Fundamentals</h3>
+                    <p class="certification-issuer">Microsoft</p>
+                    <a href="https://learn.microsoft.com/api/credentials/share/es-mx/ElmerMoreno/E5B6DBBF0B8C971E?sharingId=121CD979E02EC18F" 
+                   class="credential-link" 
+                   target="_blank">Ver Credencial</a>
+                </div>
+                <div class="certification-item">
+                    <h3 class="certification-name">AZ-900: Azure Fundamentals</h3>
+                    <p class="certification-issuer">Microsoft</p>
+                    <a href="https://learn.microsoft.com/api/credentials/share/es-mx/ElmerMoreno/F8430FD595BFBE6F?sharingId=121CD979E02EC18F" 
+                   class="credential-link" 
+                   target="_blank">Ver Credencial</a>
+                </div>
+                <div class="certification-item">
+                    <h3 class="certification-name">MS-900: Microsoft 365 Fundamentals</h3>
+                    <p class="certification-issuer">Microsoft</p>
+                    <a href="https://learn.microsoft.com/api/credentials/share/es-mx/ElmerMoreno/672C726B2ED58333?sharingId=121CD979E02EC18F" 
+                   class="credential-link" 
+                   target="_blank">Ver Credencial</a>
+                </div>
+                <div class="certification-item">
+                    <h3 class="certification-name">Certificación Profesional de Scrum Foundation - SFPC™</h3>
+                    <p class="certification-issuer">Certiprof</p>
+                    <a href="https://certiprof.com/es/products/scrum-foundation-certificacion-sfpc" 
+                   class="credential-link" 
+                   target="_blank">Ver Credencial</a>
+                </div>
+                <div class="certification-item">
+                    <h3 class="certification-name">ITIL Service Management Foundation</h3>
+                    <p class="certification-issuer">EXIN</p>
+                    <a href="https://app.exeed.pro/holder/badge/60707" 
+                   class="credential-link" 
+                   target="_blank">Ver Credencial</a>
+                </div>
+                <div class="certification-item">
+                    <h3 class="certification-name">Introduction to Cybersecurity</h3>
+                    <p class="certification-issuer">CISCO</p>
+                    <a href="https://www.credly.com/badges/628b0e40-e4cc-4f4c-8d5f-a10d8970d711" 
+                   class="credential-link" 
+                   target="_blank">Ver Credencial</a>
+                </div>
+                <div class="certification-item">
+                    <h3 class="certification-name">CCNA: Introduction to Networks</h3>
+                    <p class="certification-issuer">CISCO</p>
+                    <a href="https://www.credly.com/badges/28bed7f8-831b-4e3e-9ffb-3b4e1c7b3ba9" 
+                   class="credential-link" 
+                   target="_blank">Ver Credencial</a>
+                </div>
+                <div class="certification-item">
+                    <h3 class="certification-name">CCNA: Switching, Routing, and Wireless Essentials</h3>
+                    <p class="certification-issuer">CISCO</p>
+                    <a href="https://www.credly.com/badges/500366d9-7844-4ec6-b2ee-39f376c2a473" 
+                   class="credential-link" 
+                   target="_blank">Ver Credencial</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h3>Email</h3>
+                        <a href="mailto:emoreno.marchena@outlook.com">emoreno.marchena@outlook.com</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h3>Teléfono</h3>
+                        <a href="tel:+51930163420">+51 930163420</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h3>LinkedIn</h3>
+                        <a href="https://www.linkedin.com/in/elmermoreno" target="_blank">linkedin.com/in/elmermoreno</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fab fa-microsoft"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h3>Microsoft Learn</h3>
+                        <a href="https://learn.microsoft.com/es-es/users/elmermoreno/" target="_blank">Perfil Microsoft</a>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="footer-text">© 2025 Elmer Moreno Marchena. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Tab functionality
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons and contents
+                tabBtns.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding content
+                btn.classList.add('active');
+                const tabId = btn.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
