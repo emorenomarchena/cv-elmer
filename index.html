@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elmer Moreno - Especialista Cloud</title>
+    <title>Elmer Moreno | Cloud Solution Architect</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,6 +26,7 @@
         }
         
         body {
+            padding-top: 100px;
             font-family: 'Poppins', sans-serif;
             background-color: var(--primary);
             color: var(--text);
@@ -40,9 +41,13 @@
         
         /* Header */
         header {
-            padding: 40px 0;
-            position: relative;
-            z-index: 10;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: var(--primary);
+            padding: 20px 0;
+            z-index: 1000;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
         
         .header-content {
@@ -101,7 +106,7 @@
         
         /* Hero Section */
         .hero {
-            padding: 100px 0;
+            padding: 50px 0;
             position: relative;
         }
         
@@ -178,14 +183,14 @@
         
         /* About Section */
         .section {
-            padding: 100px 0;
+            padding: 25px 0;
         }
         
         .section-title {
             font-family: 'Playfair Display', serif;
             font-size: 40px;
             font-weight: 700;
-            margin-bottom: 60px;
+            margin-bottom: 20px;
             color: var(--white);
             position: relative;
             display: inline-block;
@@ -258,12 +263,35 @@
             color: var(--light-text);
             font-size: 14px;
         }
-        
-        /* Experience Section */
+        /* Experience Tabs Container */
         .experience-tabs {
             display: flex;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             border-bottom: 1px solid var(--secondary);
+        }
+        
+        /* Experience Section */
+        .experience-tabs button,
+        .experience-tabs a {
+            font-size: 16px;
+            font-weight: 600;
+            padding: 12px 24px;
+            color: var(--text);
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .experience-tabs button.active,
+        .experience-tabs a.active {
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .experience-tabs button:hover,
+        .experience-tabs a:hover {
+            color: var(--accent);
         }
         
         .tab-btn {
@@ -301,7 +329,7 @@
         }
         
         .job {
-            margin-bottom: 40px;
+            margin-bottom: 25px;
         }
         
         .job-title {
@@ -389,8 +417,8 @@
         /* Certifications Section */
         .certifications-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
         }
         .credential-link {
             display: inline-block;
@@ -406,7 +434,7 @@
         }
         .certification-item {
             background: var(--secondary);
-            padding: 30px;
+            padding: 20px;
             border-radius: 5px;
             transition: var(--transition);
             position: relative;
@@ -441,7 +469,12 @@
             color: var(--accent);
             font-size: 14px;
         }
-        
+        .cert-provider {
+            margin: 30px 0 25px;
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--white);
+        }
         /* Contact Section */
         .contact-info {
             display: grid;
@@ -565,7 +598,8 @@
                     <p class="greeting">Hola, soy</p>
                     <h1 class="name">Elmer Santos Moreno Marchena</h1>
                     <h2 class="title">Arquitecto de Soluciones Cloud</h2>
-                    <p class="description">Profesional especializado en soporte, implementación  y consultoría de infraestructuras y aplicaciones en la nube, comprometido con la excelencia y la innovación tecnológica.</p>
+                    <p class="description">Acompaño a las empresas en la adopción y modernización tecnológica, construyendo soluciones basadas
+en tecnologías cloud, orientadas al rendimiento, la escalabilidad y la optimización de costos.</p>
                     <a href="#contact" class="btn">Contáctame</a>
                 </div>
                 <div class="hero-image">
@@ -581,9 +615,10 @@
             <h2 class="section-title">Sobre mí</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Soy un profesional especializado en soporte, implementación  y consultoría de infraestructuras y aplicaciones en la nube, comprometido con la excelencia y la innovación tecnológica.</p>
-                    <p>Me definen el trabajo en equipo, la responsabilidad y la dedicación. Con una sólida experiencia en servicios cloud, enfoco mis esfuerzos en la mejora continua y la optimización de soluciones, impulsando el aprovechamiento estratégico de la tecnología para maximizar el valor de las plataformas en la nube.</p>
-                    <p>Mi experiencia abarca desde el diseño y la implementación de arquitecturas cloud hasta la gestión de equipos y proyectos tecnológicos, siempre con un enfoque en la creación de valor para el negocio.</p>
+                    <p>Ingeniero de Sistemas e Informática, con especialización en arquitecturas cloud y transformación digital. Cuento con experiencia en el diseño, implementación y soporte de infraestructuras tecnológicas escalables,
+                        enfocadas en la optimización de procesos y la mejora continua de los entornos tecnológicos.</p>
+                        <p>Mi trabajo se orienta a acompañar a las organizaciones en su evolución digital, asesorándolas en la adopción de tecnologías cloud de manera estratégica y alineada a sus necesidades reales de negocio. Mantengo un
+                            enfoque práctico y orientado a resultados, buscando que la tecnología aporte eficiencia operativa, escalabilidad y un uso sostenible de los recursos a largo plazo.</p>
                 </div>
                 <div class="skills">
                     <h3 style="font-size: 24px; margin-bottom: 30px; color: var(--white);">Habilidades técnicas</h3>
@@ -616,6 +651,22 @@
                             </div>
                             <p class="skill-description">Kubernetes, Docker, CI/CD pipelines y automatización de despliegues.</p>
                         </div>
+                        <div class="skill-item">
+                            <div class="skill-title">
+                                <i class="fas fa-chart-line"></i>
+                                <h3>Monitoreo y Herramientas IT</h3>
+                            </div>
+                            <p class="skill-description">Conocimientos en herramientas de monitoreo y análisis como New Relic, Grafana, Datadog y Azure Monitor. Uso de scripts en Azure CLI y PowerShell para tareas básicas de automatización.</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-title">
+                                <i class="fas fa-gear"></i>
+                                <h3>Gestión de Servicios y Soporte Especializado</h3>
+                            </div>
+                            <p class="skill-description">Gestión de servicios de TI orientada a la continuidad operativa y cumplimiento de SLA, con experiencia en
+soporte especializado (N2/N3), plataformas ITSM como Aranda, Remedy y Service Desk, y elaboración de
+reportes operativos mediante Excel y Power BI.</p>
+                        </div>                        
                     </div>
                 </div>
             </div>
@@ -638,10 +689,13 @@
                     <span class="job-date">diciembre 2024 - Actualidad</span>
                     <p class="job-description">Asesoría técnica y comercial de soluciones cloud para uno de los principales operadores de telecomunicaciones del Perú.</p>
                     <ul class="job-responsibilities">
-                        <li>Asesoría técnica y comercial de productos de las nubes públicas y privadas como Microsoft Azure, AWS, Huawei Cloud, VMware y Housing & Hosting a medida en el DC TIER III de Claro.</li>
-                        <li>Elaboración de Oferta Técnica Económica (OTE) según necesidad del cliente.</li>
-                        <li>Acompañamiento en las implementaciones de arquitecturas IaaS y PaaS.</li>
-                        <li>Elaboración de pruebas de concepto (PoC) de productos Multi-Cloud y Data Center.</li>
+                        <li>Asesoría estratégica y técnica en soluciones de nube pública y privada (Microsoft Azure, AWS, Huawei Cloud, VMware), así como servicios de Housing & Hosting en Data Center Tier III.</li>
+                        <li>Elaboración y presentación de propuestas técnicas y comerciales enfocadas en las necesidades del cliente, priorizando valor, viabilidad y retorno de inversión.</li>
+                        <li>Diseño de arquitecturas Cloud, Multi-Cloud y Data Center orientadas a escalabilidad, seguridad y eficiencia operativa.</li>
+                        <li>Acompañamiento estratégico en la implementación de arquitecturas IaaS y PaaS, incluyendo procesos de migración de infraestructura, aplicaciones y bases de datos.</li>
+                        <li>Desarrollo y ejecución de pruebas de concepto (PoC) para validar soluciones cloud antes de su adopción productiva.</li>
+                        <li>Elaboración y estandarización de documentación comercial y contractual, incluyendo plantillas de cotización, acuerdos y lineamientos para soluciones en nubes públicas y privadas.</li>
+                        <li>Capacitación técnica y funcional en tecnologías de nube pública y privada dirigida a la fuerza de ventas, con el objetivo de fortalecer la propuesta de valor y mejorar la efectividad comercial.</li>
                     </ul>
                 </div>
                 
@@ -651,55 +705,57 @@
                     <span class="job-date">noviembre 2023 - diciembre 2024</span>
                     <p class="job-description">Especialista en infraestructura cloud para importantes clientes corporativos.</p>
                     <ul class="job-responsibilities">
-                        <li>Diagnóstico y resolución de problemas en la infraestructura de Microsoft Azure, asegurando la continuidad del servicio.</li>
-                        <li>Elaboración de informes de análisis de causa raíz (RCA) para incidentes críticos.</li>
-                        <li>Desarrollo de planes de trabajo detallados para la implementación de cambios en la infraestructura de Azure.</li>
-                        <li>Implementación de prácticas FinOps para optimizar el uso de recursos y reducir costos.</li>
-                        <li>Supervisión y análisis de la infraestructura de recursos de Azure mediante herramientas como Azure Dashboard, Grafana y New Relic.</li>
-                        <li>Configuración, administración y monitoreo de clústeres de Kubernetes en Azure.</li>
+                        <li>Gestión de Incidentes y Continuidad Operativa</li>
+                        <li>Gestión de Cambios y Operación Cloud</li>
+                        <li>Optimización y Mejora Continua</li>
+                        <li>Gestión FinOps</li>
+                        <li>Monitoreo y Observabilidad</li>
+                        <li>Arquitectura y Plataformas Cloud</li>
+                        <li>Gestión de Datos y Continuidad del Negocio</li>
+                    </ul>
+                </div>
+                    <div class="job">
+                    <h3 class="job-title">Consultor Preventa Microsoft Cloud</h3>
+                    <p class="job-company">NEXSYS DEL PERÚ | Área: Microsoft</p>
+                    <span class="job-date">abril 2022 - noviembre 2023</span>
+                    <p class="job-description">Asesoría técnica y comercial de soluciones cloud de Microsoft.</p>
+                    <ul class="job-responsibilities">
+                        <li>Asesoría técnica y consultiva en soluciones Microsoft Cloud, apoyando los procesos de evaluación, diseño y toma de decisiones tecnológicas.</li>
+                        <li>Acompañamiento y habilitación técnica a socios comerciales en soluciones Microsoft Azure y Microsoft 365, fortaleciendo sus capacidades técnicas y comerciales.</li>
+                        <li>Administración de clientes y gestión del relacionamiento técnico con socios, asegurando una atención eficiente de incidencias y requerimientos asociados a las soluciones Microsoft.</li>
+                        <li>Elaboración, análisis y optimización de reportes de facturación de productos Microsoft mediante Power BI, facilitando la visibilidad de consumo y apoyando a la fuerza de ventas en la gestión comercial.</li>
+                        <li>Desarrollo y presentación de pruebas de concepto (PoC) para validar soluciones cloud de Microsoft antes de su adopción productiva.</li>
                     </ul>
                 </div>
             </div>
             
             <div id="previous" class="tab-content">
                 <div class="job">
-                    <h3 class="job-title">Consultor Preventa Microsoft Cloud</h3>
-                    <p class="job-company">NEXSYS DEL PERÚ | Área: Microsoft</p>
-                    <span class="job-date">abril 2022 - noviembre 2023</span>
-                    <ul class="job-responsibilities">
-                        <li>Asesoría técnica y comercial de productos de Microsoft.</li>
-                        <li>Entrenamiento Técnico de productos de Microsoft Azure y Microsoft 365 a Socios comerciales.</li>
-                        <li>Elaboración de Workshop Técnicos.</li>
-                        <li>Elaboración y presentación de pruebas de concepto de productos Cloud de Microsoft.</li>
-                    </ul>
-                </div>
-                
-                <div class="job">
                     <h3 class="job-title">Operador de servicios de TI</h3>
-                    <p class="job-company">SAPIA (STEFANINI IT SOLUTIONS PERU S.A.C.)| Cliente: Minera Buenaventura</p>
+                    <p class="job-company">CORPORACIÓN SAPIA (STEFANINI IT SOLUTIONS PERU S.A.C.) | Cliente: Minera Buenaventura</p>
                     <span class="job-date">julio 2021 - marzo 2022</span>
                     <ul class="job-responsibilities">
-                        <li>Soporte y administración de Infraestructuras de servidores, red y base de datos.</li>
+                        <li>Administración y operación de infraestructuras On-Premise y Cloud del cliente Buenaventura, asegurando la continuidad operativa de los servicios tecnológicos. 
+                            Gestión y monitoreo de plataformas de infraestructura, atención de incidencias de segundo nivel (N2), análisis de eventos y soporte a la operación diaria, garantizando la estabilidad, disponibilidad y
+                            cumplimiento de los niveles de servicio</li>
                     </ul>
-                </div>
-                
-                <div class="job">
-                    <h3 class="job-title">Analista de Sistemas Informáticos</h3>
-                    <p class="job-company">INVERSIONES NUEVA CERAMICA SA</p>
-                    <span class="job-date">septiembre 2020 - enero 2021</span>
-                    <ul class="job-responsibilities">
-                        <li>Asistencia y soporte técnico de hardware, software y otros servicios tecnológicos.</li>
-                        <li>Administración de Infraestructura de red.</li>
-                        <li>Administración de servidores de aplicaciones y base de datos.</li>
-                    </ul>
-                </div>
-                
+                </div>                              
                 <div class="job">
                     <h3 class="job-title">Supervisor de Soporte de Aplicaciones</h3>
                     <p class="job-company">HITSS PERÚ S.A.C. | Cliente: América Móvil Perú SAC</p>
                     <span class="job-date">mayo 2017 - junio 2020</span>
                     <ul class="job-responsibilities">
-                        <li>Supervisión de soporte de mesa de ayuda de aplicaciones de entorno web y escritorio.</li>
+                        <li>Gestión y supervisión de los servicios TI de mesa de ayuda para el cliente Claro Perú, asegurando la atención oportuna de incidencias y requerimientos de aplicaciones empresariales. Coordinación
+                            del equipo de soporte, seguimiento de tickets, Elaboración de informes, control de SLA y mejora continua de los procesos de soporte y operación.</li>
+                    </ul>
+                </div>
+                <div class="job">
+                    <h3 class="job-title">Analista de Sistemas Informáticos</h3>
+                    <p class="job-company">COSAPI DATA (CORPORACIÓN SAPIA) | Cliente: América Móvil Perú SAC </p>
+                    <span class="job-date">abril 2014 - enero 2017</span>
+                    <ul class="job-responsibilities">
+                        <li>Gestión y supervisión del servicio de mesa de ayuda, asegurando la correcta atención de incidencias y requerimientos, el cumplimiento de los niveles de servicio 
+                            (SLA) y la calidad en la atención a los usuarios. Coordinación del equipo de soporte, seguimiento de tickets y mejora continua de los procesos operativos.</li>
                     </ul>
                 </div>
             </div>
@@ -714,7 +770,7 @@
                 <div class="education-item">
                     <h3 class="education-degree">Ingeniería de Sistemas e Informática</h3>
                     <p class="education-institution">Universidad Tecnológica del Perú</p>
-                    <span class="education-date">Bachiller</span>
+                    <span class="education-date">Titulado</span>
                 </div>
                 <div class="education-item">
                     <h3 class="education-degree">Computación Informática y Sistemas</h3>
@@ -729,70 +785,109 @@
     <section id="certifications" class="section">
         <div class="container">
             <h2 class="section-title">Certificaciones</h2>
+            <div class="cert-provider-block">
+            <h3 class="cert-provider">Microsoft</h3>  
             <div class="certifications-grid">
                 <div class="certification-item">
                     <h3 class="certification-name">AZ-305: Azure Solutions Architect Expert - EN PROCESO</h3>
-                    <p class="certification-issuer">Microsoft</p>
                     <a href="https://learn.microsoft.com/en-us/credentials/certifications/exams/az-305/" 
                    class="credential-link" 
                    target="_blank">Proximamente</a>
                 </div>
                 <div class="certification-item">
                     <h3 class="certification-name">AZ-104: Azure Administrator Associate</h3>
-                    <p class="certification-issuer">Microsoft</p>
                     <a href="https://learn.microsoft.com/api/credentials/share/es-mx/ElmerMoreno/A1FB1DD4A08888C2?sharingId=121CD979E02EC18F" 
                    class="credential-link" 
                    target="_blank">Ver Credencial</a>
                 </div>
                 <div class="certification-item">
                     <h3 class="certification-name">AZ-700: Azure Network Engineer Associate</h3>
-                    <p class="certification-issuer">Microsoft</p>
                     <a href="https://learn.microsoft.com/api/credentials/share/es-mx/ElmerMoreno/D777B4BB4AD6DDE9?sharingId=121CD979E02EC18F" 
                    class="credential-link" 
                    target="_blank">Ver Credencial</a>
                 </div>
                 <div class="certification-item">
                     <h3 class="certification-name">SC-300: Identity and Access Administrator</h3>
-                    <p class="certification-issuer">Microsoft</p>
                     <a href="https://learn.microsoft.com/api/credentials/share/es-mx/ElmerMoreno/25AF42B4F7C14603?sharingId=121CD979E02EC18F" 
                    class="credential-link" 
                    target="_blank">Ver Credencial</a>
                 </div>
                 <div class="certification-item">
                     <h3 class="certification-name">SC-900: Security, Compliance Fundamentals</h3>
-                    <p class="certification-issuer">Microsoft</p>
                     <a href="https://learn.microsoft.com/api/credentials/share/es-mx/ElmerMoreno/CBEF4B23AD4C441A?sharingId=121CD979E02EC18F" 
                    class="credential-link" 
                    target="_blank">Ver Credencial</a>
                 </div>
                 <div class="certification-item">
                     <h3 class="certification-name">DP-900: Azure Data Fundamentals</h3>
-                    <p class="certification-issuer">Microsoft</p>
                     <a href="https://learn.microsoft.com/api/credentials/share/es-mx/ElmerMoreno/E5B6DBBF0B8C971E?sharingId=121CD979E02EC18F" 
                    class="credential-link" 
                    target="_blank">Ver Credencial</a>
                 </div>
                 <div class="certification-item">
                     <h3 class="certification-name">AZ-900: Azure Fundamentals</h3>
-                    <p class="certification-issuer">Microsoft</p>
                     <a href="https://learn.microsoft.com/api/credentials/share/es-mx/ElmerMoreno/F8430FD595BFBE6F?sharingId=121CD979E02EC18F" 
                    class="credential-link" 
                    target="_blank">Ver Credencial</a>
                 </div>
                 <div class="certification-item">
                     <h3 class="certification-name">MS-900: Microsoft 365 Fundamentals</h3>
-                    <p class="certification-issuer">Microsoft</p>
                     <a href="https://learn.microsoft.com/api/credentials/share/es-mx/ElmerMoreno/672C726B2ED58333?sharingId=121CD979E02EC18F" 
                    class="credential-link" 
                    target="_blank">Ver Credencial</a>
                 </div>
-                <div class="certification-item">
-                    <h3 class="certification-name">Certificación Profesional de Scrum Foundation - SFPC™</h3>
-                    <p class="certification-issuer">Certiprof</p>
-                    <a href="https://certiprof.com/es/products/scrum-foundation-certificacion-sfpc" 
-                   class="credential-link" 
-                   target="_blank">Ver Credencial</a>
-                </div>
+            </div>
+        </div>      
+            <div class="cert-provider-block">    
+            <h3 class="cert-provider">Oracle Cloud Infrastructure (OCI)</h3>
+            <div class="certifications-grid">
+                    <div class="certification-item">
+                            <h3 class="certification-name">Oracle Cloud Infrastructure 2025 Certified Architect Associate</h3>
+                            <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=CB3D1B1791D60139D1F6E862F6D3A88E59EE88A2B6EA074D96E8CABF6E98F082"
+                            class="credential-link"
+                            target="_blank">Ver Credencial</a>
+                        </div>
+                    <div class="certification-item">
+                            <h3 class="certification-name">Oracle Cloud Infrastructure 2025 Certified Developer Professional</h3>
+                            <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=5BA991ADB71DD824D743943B9939A5A08056399EDFC264800F2706B939D85BBA"
+                            class="credential-link"
+                            target="_blank">Ver Credencial</a>
+                        </div>
+                    <div class="certification-item">
+                            <h3 class="certification-name">Oracle Cloud Infrastructure 2025 Certified DevOps Professional</h3>
+                            <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=E9C375A06EC2E2794A99F08AC7C586623B36444A9EB4222994E6010B2613DE2C"
+                            class="credential-link"
+                            target="_blank">Ver Credencial</a>
+                        </div>
+                    <div class="certification-item">
+                            <h3 class="certification-name">Oracle Cloud Infrastructure 2025 Certified Observability Professional</h3>
+                            <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=B39E313488BC22CE617949B6BC1072D198F24E682CF32E41FDEF476BC58FC5DA"
+                            class="credential-link"
+                            target="_blank">Ver Credencial</a>
+                        </div>
+                    <div class="certification-item">
+                            <h3 class="certification-name">Oracle Data Platform 2025 Certified Foundations Associate</h3>
+                            <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=E9C375A06EC2E2794A99F08AC7C58662F91D62697E6190FD9594851C1BBBAE43"
+                            class="credential-link"
+                            target="_blank">Ver Credencial</a>
+                        </div>
+                    <div class="certification-item">
+                            <h3 class="certification-name">Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate</h3>
+                            <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=7D3CE3F386327DE5C020B93269B4E48B9303D3EB3CE1A3A343C4AEDE8448FDA9"
+                            class="credential-link"
+                            target="_blank">Ver Credencial</a>
+                        </div>
+                    <div class="certification-item">
+                            <h3 class="certification-name">Oracle Cloud Infrastructure 2025 Certified Foundations Associate</h3>
+                            <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=D935C19B64A2FC39300B113F37634CB6D4FA2935F75A8BC967E85EF1C34C367E"
+                            class="credential-link"
+                            target="_blank">Ver Credencial</a>
+                        </div>
+                    </div>
+                </div> 
+            <div class="cert-provider-block">  
+            <h3 class="cert-provider">Networking & Security</h3>
+            <div class="certifications-grid">
                 <div class="certification-item">
                     <h3 class="certification-name">ITIL Service Management Foundation</h3>
                     <p class="certification-issuer">EXIN</p>
@@ -820,6 +915,22 @@
                     <a href="https://www.credly.com/badges/500366d9-7844-4ec6-b2ee-39f376c2a473" 
                    class="credential-link" 
                    target="_blank">Ver Credencial</a>
+                </div>
+            </div>
+        </div>
+            <div class="cert-provider-block">  
+            <h3 class="cert-provider">Service Management & Agile</h3>
+
+                    <div class="certification-item">
+                    <h3 class="certification-name">Certificación Profesional de Scrum Foundation - SFPC™</h3>
+                    <p class="certification-issuer">Certiprof</p>
+                    <a href="https://certiprof.com/es/products/scrum-foundation-certificacion-sfpc" 
+                   class="credential-link"
+                   target="_blank">Ver Credencial</a>
+                </div>
+            </div>
+        </div>
+                </div>
                 </div>
             </div>
         </div>
@@ -874,7 +985,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p class="footer-text">© 2025 Elmer Moreno Marchena. Todos los derechos reservados.</p>
+            <p class="footer-text">© 2026 Elmer Moreno Marchena. Todos los derechos reservados.</p>
         </div>
     </footer>
 
@@ -903,9 +1014,9 @@
                 
                 const targetId = this.getAttribute('href');
                 const targetElement = document.querySelector(targetId);
-                
+                const HEADER_HEIGHT = 100;
                 window.scrollTo({
-                    top: targetElement.offsetTop - 100,
+                    top: targetElement.offsetTop - HEADER_HEIGHT,
                     behavior: 'smooth'
                 });
             });
