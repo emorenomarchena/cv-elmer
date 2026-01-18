@@ -34,6 +34,7 @@
         }
         
         .container {
+            width: 90%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
@@ -564,22 +565,32 @@
         
         /* Responsive Styles */
         @media (max-width: 992px) {
-            .hero-content, .about-content {
-                flex-direction: column;
-            }
-            
-            .name {
-                font-size: 50px;
-            }
-            
-            .education-grid, .certifications-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .contact-info {
-                grid-template-columns: 1fr;
-            }
+
+        .hero-content,
+        .about-content {
+        flex-direction: column;
         }
+
+        .name {
+        font-size: 42px;
+        }
+
+        /* Tablets = 2 columnas */
+        .education-grid,
+        .certifications-grid,
+        .accreditations-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        }
+
+        .contact-info {
+        grid-template-columns: 1fr;
+        }
+
+        section {
+        padding: 30px 0;
+        }
+    }
         
         @media (max-width: 768px) {
             .header-content {
@@ -588,18 +599,54 @@
             }
             
             .main-menu ul {
-                margin-top: 30px;
+                margin-top: 20px;
                 justify-content: center;
+                flex-wrap: wrap;
             }
             
             .main-menu li {
-                margin: 0 15px;
+                margin: 8px 12px;
             }
             
             .skills-grid {
                 grid-template-columns: 1fr;
             }
+            .experience-tabs {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
         }
+        @media (max-width: 576px) {
+
+            body {
+                padding-top: 80px;
+        }
+
+            .name {
+                font-size: 32px;
+                line-height: 1.2;
+        }
+
+            .section-title {
+                font-size: 24px;
+                margin-bottom: 20px;
+        }
+
+    /* Mobile = 1 columna */
+            .education-grid,
+            .certifications-grid,
+            .accreditations-grid {
+                grid-template-columns: 1fr;
+        }
+
+            .job {
+                margin-bottom: 20px;
+        }
+
+            section {
+                padding: 25px 0;
+        }
+    }
     </style>
 </head>
 <body>
@@ -685,14 +732,14 @@ en tecnologías cloud, orientadas al rendimiento, la escalabilidad y la optimiza
                         <div class="skill-item">
                             <div class="skill-title">
                                 <i class="fas fa-chart-line"></i>
-                                <h3>Monitoreo y Herramientas IT</h3>
+                                <h3>Monitoreo y Observabilidad</h3>
                             </div>
-                            <p class="skill-description">Conocimientos en herramientas de monitoreo y análisis como New Relic, Grafana, Datadog y Azure Monitor. Uso de scripts en Azure CLI y PowerShell para tareas básicas de automatización.</p>
+                            <p class="skill-description">Conocimientos en herramientas de monitoreo y análisis como New Relic, Grafana, Datadog y Azure Monitor, Log Analytics Workspace, application insights. Uso de scripts en Azure CLI y PowerShell para tareas básicas de automatización.</p>
                         </div>
                         <div class="skill-item">
                             <div class="skill-title">
                                 <i class="fas fa-gear"></i>
-                                <h3>Gestión de Servicios y Soporte Especializado</h3>
+                                <h3>Gestión de Servicios & Soporte Especializado</h3>
                             </div>
                             <p class="skill-description">Gestión de servicios de TI orientada a la continuidad operativa y cumplimiento de SLA, con experiencia en
 soporte especializado (N2/N3), plataformas ITSM como Aranda, Remedy y Service Desk, y elaboración de
