@@ -3,1169 +3,508 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio profesional de Elmer Moreno Marchena — Cloud Solution Architect, Cloud & Data Center Pre-Sales.">
+    <meta name="author" content="Elmer Santos Moreno Marchena">
     <title>Elmer Moreno | Cloud Solution Architect</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #0a192f;
-            --secondary: #172a45;
-            --accent: #64ffda;
-            --text: #ccd6f6;
-            --light-text: #8892b0;
-            --white: #e6f1ff;
-            --transition: all 0.3s ease;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            padding-top: 100px;
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--primary);
-            color: var(--text);
-            line-height: 1.6;
-        }
-        
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Header */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: var(--primary);
-            padding: 20px 0;
-            z-index: 1000;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-        
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 28px;
-            font-weight: 700;
-            color: var(--accent);
-        }
-        
-        .logo span {
-            color: var(--white);
-        }
-        
-        .main-menu ul {
-            display: flex;
-            list-style: none;
-        }
-        
-        .main-menu li {
-            margin-left: 40px;
-        }
-        
-        .main-menu a {
-            color: var(--text);
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: 500;
-            transition: var(--transition);
-            position: relative;
-        }
-        
-        .main-menu a:hover {
-            color: var(--accent);
-        }
-        
-        .main-menu a:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            background: var(--accent);
-            bottom: -5px;
-            left: 0;
-            transition: var(--transition);
-        }
-        
-        .main-menu a:hover:after {
-            width: 100%;
-        }
-        
-        /* Hero Section */
-        .hero {
-            padding: 50px 0;
-            position: relative;
-        }
-        
-        .hero-content {
-            display: flex;
-            align-items: center;
-            gap: 60px;
-        }
-        
-        .hero-text {
-            flex: 1;
-        }
-        
-        .hero-image {
-            flex: 1;
-            position: relative;
-        }
-        
-        .hero-image img {
-            width: 100%;
-            max-width: 400px;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            border: 2px solid var(--accent);
-        }
-        
-        .greeting {
-            color: var(--accent);
-            font-size: 18px;
-            margin-bottom: 20px;
-            font-weight: 500;
-        }
-        
-        .name {
-            font-family: 'Playfair Display', serif;
-            font-size: 70px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            line-height: 1.1;
-            color: var(--white);
-        }
-        
-        .title {
-            font-size: 24px;
-            color: var(--light-text);
-            margin-bottom: 30px;
-            font-weight: 500;
-        }
-        
-        .description {
-            font-size: 16px;
-            color: var(--light-text);
-            margin-bottom: 40px;
-            max-width: 600px;
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 15px 30px;
-            background: transparent;
-            color: var(--accent);
-            border: 1px solid var(--accent);
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: 500;
-            transition: var(--transition);
-            cursor: pointer;
-        }
-        
-        .btn:hover {
-            background: rgba(100, 255, 218, 0.1);
-        }
-        
-        /* About Section */
-        .section {
-            padding: 25px 0;
-        }
-        
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 40px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            color: var(--white);
-            position: relative;
-            display: inline-block;
-        }
-        
-        .section-title:after {
-            content: '';
-            position: absolute;
-            width: 60%;
-            height: 2px;
-            background: var(--accent);
-            bottom: -10px;
-            left: 0;
-        }
-        
-        .about-content {
-            display: flex;
-            gap: 60px;
-        }
-        
-        .about-text {
-            flex: 1;
-        }
-        
-        .about-text p {
-            margin-bottom: 20px;
-            color: var(--light-text);
-            font-size: 16px;
-        }
-        
-        .skills {
-            flex: 1;
-        }
-        
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-        
-        .skill-item {
-            background: var(--secondary);
-            padding: 20px;
-            border-radius: 5px;
-            transition: var(--transition);
-        }
-        
-        .skill-item:hover {
-            transform: translateY(-5px);
-        }
-        
-        .skill-title {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-        
-        .skill-title i {
-            color: var(--accent);
-            margin-right: 10px;
-            font-size: 20px;
-        }
-        
-        .skill-title h3 {
-            font-size: 18px;
-            font-weight: 500;
-        }
-        
-        .skill-description {
-            color: var(--light-text);
-            font-size: 14px;
-        }
-        /* Experience Tabs Container */
-        .experience-tabs {
-            display: flex;
-            margin-bottom: 20px;
-            border-bottom: 1px solid var(--secondary);
-        }
-        
-        /* Experience Section */
-        .experience-tabs button,
-        .experience-tabs a {
-            font-size: 16px;
-            font-weight: 600;
-            padding: 12px 24px;
-            color: var(--text);
-            background: none;
-            border: none;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .experience-tabs button.active,
-        .experience-tabs a.active {
-            font-weight: 700;
-            color: var(--accent);
-        }
-
-        .experience-tabs button:hover,
-        .experience-tabs a:hover {
-            color: var(--accent);
-        }
-        
-        .tab-btn {
-            padding: 15px 25px;
-            background: transparent;
-            border: none;
-            color: var(--light-text);
-            font-size: 16px;
-            font-weight: 500;
-            cursor: pointer;
-            position: relative;
-            transition: var(--transition);
-        }
-        
-        .tab-btn.active {
-            color: var(--accent);
-        }
-        
-        .tab-btn.active:after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 2px;
-            background: var(--accent);
-            bottom: -1px;
-            left: 0;
-        }
-        
-        .tab-content {
-            display: none;
-        }
-        
-        .tab-content.active {
-            display: block;
-        }
-        
-        .job {
-            margin-bottom: 25px;
-        }
-        
-        .job-title {
-            font-size: 22px;
-            font-weight: 600;
-            margin-bottom: 5px;
-            color: var(--white);
-        }
-        
-        .job-company {
-            color: var(--accent);
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
-        
-        .job-date {
-            color: var(--light-text);
-            font-size: 14px;
-            margin-bottom: 15px;
-            display: block;
-        }
-        
-        .job-description {
-            color: var(--light-text);
-            font-size: 16px;
-            margin-bottom: 15px;
-        }
-        
-        .job-responsibilities {
-            list-style: none;
-        }
-        
-        .job-responsibilities li {
-            position: relative;
-            padding-left: 25px;
-            margin-bottom: 10px;
-            color: var(--light-text);
-            font-size: 15px;
-        }
-        
-        .job-responsibilities li:before {
-            content: '▹';
-            position: absolute;
-            left: 0;
-            color: var(--accent);
-        }
-        
-        /* Education Section */
-        .education-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-        }
-        
-        .education-item {
-            background: var(--secondary);
-            padding: 30px;
-            border-radius: 5px;
-            transition: var(--transition);
-        }
-        
-        .education-item:hover {
-            transform: translateY(-5px);
-        }
-        
-        .education-degree {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 10px;
-            color: var(--white);
-        }
-        
-        .education-institution {
-            color: var(--accent);
-            font-size: 16px;
-            margin-bottom: 15px;
-        }
-        
-        .education-date {
-            color: var(--light-text);
-            font-size: 14px;
-            margin-bottom: 15px;
-        }
-        /* Acreditaciones Profesionales */
-        .accreditations-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .accreditation-item {
-            background-color: var(--secondary);
-            padding: 30px;
-            border-radius: 8px;
-            border-left: 4px solid var(--accent);
-        }
-
-        .accreditation-item h3 {
-            font-size: 18px;
-            font-weight: 600;
-            color: var(--white);
-            margin-bottom: 10px;
-        }
-
-        .accreditation-role {
-            font-size: 15px;
-            color: var(--text);
-            margin-bottom: 5px;
-        }
-
-        .accreditation-status {
-            font-size: 14px;
-            color: var(--accent);
-            font-weight: 500;
-        }
-        /* Certifications Section */
-        .certifications-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 24px;
-        }
-        .credential-link {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 8px 15px;
-            background-color: rgba(100, 255, 218, 0.1);
-            color: var(--accent);
-            border: 1px solid var(--accent);
-            border-radius: 4px;
-            font-size: 14px;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-        .certification-item {
-            background: var(--secondary);
-            padding: 20px;
-            border-radius: 5px;
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-        }
-        .credential-link:hover {
-            background-color: rgba(100, 255, 218, 0.2);
-            transform: translateY(-2px);
-        }
-        .certification-item:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 3px;
-            height: 100%;
-            background: var(--accent);
-        }
-        
-        .certification-item:hover {
-            transform: translateY(-5px);
-        }
-        
-        .certification-name {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 10px;
-            color: var(--white);
-        }
-        
-        .certification-issuer {
-            color: var(--accent);
-            font-size: 14px;
-        }
-        .cert-provider {
-            margin: 30px 0 25px;
-            font-size: 24px;
-            font-weight: 600;
-            color: var(--white);
-        }
-        /* Contact Section */
-        .contact-info {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 50px;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-        }
-        
-        .contact-icon {
-            width: 60px;
-            height: 60px;
-            background: var(--secondary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 20px;
-            color: var(--accent);
-            font-size: 20px;
-        }
-        
-        .contact-text h3 {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 5px;
-            color: var(--white);
-        }
-        
-        .contact-text a {
-            color: var(--light-text);
-            text-decoration: none;
-            font-size: 14px;
-            transition: var(--transition);
-        }
-        
-        .contact-text a:hover {
-            color: var(--accent);
-        }
-        
-        /* Footer */
-        footer {
-            background: var(--secondary);
-            padding: 30px 0;
-            text-align: center;
-        }
-        
-        .footer-text {
-            color: var(--light-text);
-            font-size: 14px;
-        }
-        
-        /* Responsive Styles */
-        @media (max-width: 992px) {
-
-        .hero-content,
-        .about-content {
-        flex-direction: column;
-        }
-
-        .name {
-        font-size: 42px;
-        }
-
-        /* Tablets = 2 columnas */
-        .education-grid,
-        .certifications-grid,
-        .accreditations-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-        }
-
-        .contact-info {
-        grid-template-columns: 1fr;
-        }
-
-        section {
-        padding: 30px 0;
-        }
-    }
-        
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .main-menu ul {
-                margin-top: 20px;
-                justify-content: center;
-                flex-wrap: wrap;
-            }
-            
-            .main-menu li {
-                margin: 8px 12px;
-            }
-            
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-            .experience-tabs {
-                flex-wrap: wrap;
-                gap: 10px;
-            }
-        }
-        @media (max-width: 576px) {
-
-            body {
-                padding-top: 80px;
-        }
-
-            .name {
-                font-size: 32px;
-                line-height: 1.2;
-        }
-
-            .section-title {
-                font-size: 24px;
-                margin-bottom: 20px;
-        }
-
-    /* Mobile = 1 columna */
-            .education-grid,
-            .certifications-grid,
-            .accreditations-grid {
-                grid-template-columns: 1fr;
-        }
-
-            .job {
-                margin-bottom: 20px;
-        }
-
-            section {
-                padding: 25px 0;
-        }
-        .hero-buttons {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .btn-secondary {
-            background-color: rgba(100, 255, 218, 0.08);
-        }
-
-        .btn-secondary:hover {
-            background-color: rgba(100, 255, 218, 0.18);
-        }
-    }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">Elmer <span>Moreno</span></div>
-                <nav class="main-menu">
-                    <ul>
-                        <li><a href="#about">Sobre mí</a></li>
-                        <li><a href="#experience">Experiencia</a></li>
-                        <li><a href="#education">Educación</a></li>
-                        <li><a href="#certifications">Certificaciones</a></li>
-                        <li><a href="#contact">Contacto</a></li>
-                    </ul>
-                </nav>
-            </div>
+    <div class="page-noise" aria-hidden="true"></div>
+
+    <header class="site-header" id="top">
+        <div class="container nav-wrap">
+            <a class="brand" href="#top" aria-label="Inicio">
+                <span class="brand-mark">EM</span>
+                <span class="brand-text">Elmer <strong>Moreno</strong></span>
+            </a>
+
+            <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="main-nav" aria-label="Navegación principal">
+                <a href="#about">Perfil</a>
+                <a href="#expertise">Expertise</a>
+                <a href="#experience">Experiencia</a>
+                <a href="#certifications">Certificaciones</a>
+                <a href="#education">Formación</a>
+                <a href="#contact" class="nav-cta">Contacto</a>
+            </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <p class="greeting">Hola, soy</p>
-                    <h1 class="name">Elmer Santos Moreno Marchena</h1>
-                    <h2 class="title">Arquitecto de Soluciones Cloud</h2>
-                    <p class="description">Acompaño a las empresas en la adopción y modernización tecnológica, construyendo soluciones basadas
-en tecnologías cloud, orientadas al rendimiento, la escalabilidad y la optimización de costos.</p>
-                    <div class="hero-buttons">
-    <a href="#contact" class="btn">Contáctame</a>
+    <main>
+        <!-- HERO -->
+        <section class="hero section">
+            <div class="container hero-grid">
+                <div class="hero-copy reveal">
+                    <div class="eyebrow"><span></span> CLOUD · DATA CENTER · PRE-SALES</div>
+                    <h1>Diseño soluciones cloud que conectan <em>tecnología</em> y negocio.</h1>
+                    <p class="hero-lead">
+                        Soy <strong>Elmer Santos Moreno Marchena</strong>, Ingeniero de Sistemas e Informática,
+                        especializado en arquitecturas cloud, transformación digital y diseño de soluciones
+                        escalables.
+                    </p>
 
-    <a href="CV - Elmer Moreno Marchena -documentado.pdf"
-        class="btn btn-secondary"
-        download="CV-Elmer-Moreno.pdf"
-        target="_blank"
-        rel="noopener noreferrer">
-        Obtener CV
-    </a>
-</div>
-                </div>
-                <div class="hero-image">
-                    <img src="foto.jpg" alt="Elmer Moreno">
-                </div>
-            </div>
-        </div>
-    </section>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#contact">Hablemos <i class="fa-solid fa-arrow-right"></i></a>
+                        <a class="btn btn-ghost" href="CV-Elmer-Moreno.pdf" download="CV-Elmer-Moreno.pdf">
+                            Descargar CV <i class="fa-solid fa-download"></i>
+                        </a>
+                    </div>
 
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title">Sobre mí</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Ingeniero de Sistemas e Informática, con especialización en arquitecturas cloud y transformación digital. Cuento con experiencia en el diseño, implementación y soporte de infraestructuras tecnológicas escalables,
-                        enfocadas en la optimización de procesos y la mejora continua de los entornos tecnológicos.</p>
-                        <p>Mi trabajo se orienta a acompañar a las organizaciones en su evolución digital, asesorándolas en la adopción de tecnologías cloud de manera estratégica y alineada a sus necesidades reales de negocio. Mantengo un
-                            enfoque práctico y orientado a resultados, buscando que la tecnología aporte eficiencia operativa, escalabilidad y un uso sostenible de los recursos a largo plazo.</p>
-                </div>
-                <div class="skills">
-                    <h3 style="font-size: 24px; margin-bottom: 30px; color: var(--white);">Habilidades técnicas</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <div class="skill-title">
-                                <i class="fab fa-microsoft"></i>
-                                <h3>Microsoft Azure</h3>
-                            </div>
-                            <p class="skill-description">Experto en implementación y gestión de soluciones en Azure, incluyendo IaaS, PaaS y SaaS.</p>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-title">
-                                <i class="fas fa-cloud"></i>
-                                <h3>Multi-Cloud</h3>
-                            </div>
-                            <p class="skill-description">Experiencia en AWS, Huawei Cloud, OCI y soluciones VMware para entornos híbridos.</p>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-title">
-                                <i class="fas fa-database"></i>
-                                <h3>Bases de Datos</h3>
-                            </div>
-                            <p class="skill-description">SQL Server, PostgreSQL, MySQL, CosmoDB y optimización de consultas.</p>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-title">
-                                <i class="fas fa-project-diagram"></i>
-                                <h3>DevOps</h3>
-                            </div>
-                            <p class="skill-description">Kubernetes, Docker, CI/CD pipelines y automatización de despliegues.</p>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-title">
-                                <i class="fas fa-chart-line"></i>
-                                <h3>Monitoreo y Observabilidad</h3>
-                            </div>
-                            <p class="skill-description">Conocimientos en herramientas de monitoreo y análisis como New Relic, Grafana, Datadog y Azure Monitor, Log Analytics Workspace, application insights. Uso de scripts en Azure CLI y PowerShell para tareas básicas de automatización.</p>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-title">
-                                <i class="fas fa-gear"></i>
-                                <h3>Gestión de Servicios & Soporte Especializado</h3>
-                            </div>
-                            <p class="skill-description">Gestión de servicios de TI orientada a la continuidad operativa y cumplimiento de SLA, con experiencia en
-soporte especializado (N2/N3), plataformas ITSM como Aranda, Remedy y Service Desk, y elaboración de
-reportes operativos mediante Excel y Power BI.</p>
-                        </div>                        
+                    <div class="hero-links">
+                        <a href="https://www.linkedin.com/in/elmermoreno" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="https://learn.microsoft.com/es-es/users/elmermoreno/" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-microsoft"></i> Microsoft Learn
+                        </a>
+                        <a href="mailto:emoreno.marchena@outlook.com">
+                            <i class="fa-solid fa-envelope"></i> Email
+                        </a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="section">
-        <div class="container">
-            <h2 class="section-title">Experiencia</h2>
-            <div class="experience-tabs">
-                <button class="tab-btn active" data-tab="current">Actual</button>
-                <button class="tab-btn" data-tab="previous">Anterior</button>
-            </div>
-            
-            <div id="current" class="tab-content active">
-                <div class="job">
-                    <h3 class="job-title">Especialista Cloud & Data Center (Pre-Sales)</h3>
-                    <p class="job-company">Cliente: CLARO PERÚ</p>
-                    <span class="job-date">diciembre 2024 - Actualidad</span>
-                    <p class="job-description">Asesoría técnica y comercial de soluciones cloud para uno de los principales operadores de telecomunicaciones del Perú.</p>
-                    <ul class="job-responsibilities">
-                        <li>Asesoría estratégica y técnica en soluciones de nube pública y privada (Microsoft Azure, AWS, Huawei Cloud, VMware), así como servicios de Housing & Hosting en Data Center Tier III.</li>
-                        <li>Elaboración y presentación de propuestas técnicas y comerciales enfocadas en las necesidades del cliente, priorizando valor, viabilidad y retorno de inversión.</li>
-                        <li>Diseño de arquitecturas Cloud, Multi-Cloud y Data Center orientadas a escalabilidad, seguridad y eficiencia operativa.</li>
-                        <li>Acompañamiento estratégico en la implementación de arquitecturas IaaS y PaaS, incluyendo procesos de migración de infraestructura, aplicaciones y bases de datos.</li>
-                        <li>Desarrollo y ejecución de pruebas de concepto (PoC) para validar soluciones cloud antes de su adopción productiva.</li>
-                        <li>Elaboración y estandarización de documentación comercial y contractual, incluyendo plantillas de cotización, acuerdos y lineamientos para soluciones en nubes públicas y privadas.</li>
-                        <li>Capacitación técnica y funcional en tecnologías de nube pública y privada dirigida a la fuerza de ventas, con el objetivo de fortalecer la propuesta de valor y mejorar la efectividad comercial.</li>
-                    </ul>
-                </div>
-                
-                <div class="job">
-                    <h3 class="job-title">Cloud Specialist (ISX-System Expert - Engineering)</h3>
-                    <p class="job-company">NTT DATA PERÚ | Clientes: Telefónica del Perú y Credicorp</p>
-                    <span class="job-date">noviembre 2023 - diciembre 2024</span>
-                    <p class="job-description">Especialista en infraestructura cloud para importantes clientes corporativos.</p>
-                    <ul class="job-responsibilities">
-                        <li>Gestión de Incidentes y Continuidad Operativa</li>
-                        <li>Gestión de Cambios y Operación Cloud</li>
-                        <li>Optimización y Mejora Continua</li>
-                        <li>Gestión FinOps</li>
-                        <li>Monitoreo y Observabilidad</li>
-                        <li>Arquitectura y Plataformas Cloud</li>
-                        <li>Gestión de Datos y Continuidad del Negocio</li>
-                    </ul>
-                </div>
-                    <div class="job">
-                    <h3 class="job-title">Consultor Preventa Microsoft Cloud</h3>
-                    <p class="job-company">NEXSYS DEL PERÚ | Área: Microsoft</p>
-                    <span class="job-date">abril 2022 - noviembre 2023</span>
-                    <p class="job-description">Asesoría técnica y comercial de soluciones cloud de Microsoft.</p>
-                    <ul class="job-responsibilities">
-                        <li>Asesoría técnica y consultiva en soluciones Microsoft Cloud, apoyando los procesos de evaluación, diseño y toma de decisiones tecnológicas.</li>
-                        <li>Acompañamiento y habilitación técnica a socios comerciales en soluciones Microsoft Azure y Microsoft 365, fortaleciendo sus capacidades técnicas y comerciales.</li>
-                        <li>Administración de clientes y gestión del relacionamiento técnico con socios, asegurando una atención eficiente de incidencias y requerimientos asociados a las soluciones Microsoft.</li>
-                        <li>Elaboración, análisis y optimización de reportes de facturación de productos Microsoft mediante Power BI, facilitando la visibilidad de consumo y apoyando a la fuerza de ventas en la gestión comercial.</li>
-                        <li>Desarrollo y presentación de pruebas de concepto (PoC) para validar soluciones cloud de Microsoft antes de su adopción productiva.</li>
-                    </ul>
+                <div class="hero-visual reveal reveal-delay">
+                    <div class="visual-orbit orbit-one"></div>
+                    <div class="visual-orbit orbit-two"></div>
+                    <div class="photo-frame">
+                        <div class="photo-glow"></div>
+                        <img src="foto.jpg" alt="Elmer Moreno Marchena">
+                    </div>
+                    <div class="floating-card card-cloud">
+                        <span class="mini-icon"><i class="fa-solid fa-cloud"></i></span>
+                        <div><small>Especialidad</small><strong>Cloud Architecture</strong></div>
+                    </div>
+                    <div class="floating-card card-cip">
+                        <span class="mini-icon"><i class="fa-solid fa-certificate"></i></span>
+                        <div><small>Colegiatura</small><strong>CIP 404396</strong></div>
+                    </div>
                 </div>
             </div>
-            
-            <div id="previous" class="tab-content">
-                <div class="job">
-                    <h3 class="job-title">Operador de servicios de TI</h3>
-                    <p class="job-company">CORPORACIÓN SAPIA (STEFANINI IT SOLUTIONS PERU S.A.C.) | Cliente: Minera Buenaventura</p>
-                    <span class="job-date">julio 2021 - marzo 2022</span>
-                    <ul class="job-responsibilities">
-                        <li>Administración y operación de infraestructuras On-Premise y Cloud del cliente Buenaventura, asegurando la continuidad operativa de los servicios tecnológicos. 
-                            Gestión y monitoreo de plataformas de infraestructura, atención de incidencias de segundo nivel (N2), análisis de eventos y soporte a la operación diaria, garantizando la estabilidad, disponibilidad y
-                            cumplimiento de los niveles de servicio</li>
-                    </ul>
-                </div>                              
-                <div class="job">
-                    <h3 class="job-title">Supervisor de Soporte de Aplicaciones</h3>
-                    <p class="job-company">HITSS PERÚ S.A.C. | Cliente: América Móvil Perú SAC</p>
-                    <span class="job-date">mayo 2017 - junio 2020</span>
-                    <ul class="job-responsibilities">
-                        <li>Gestión y supervisión de los servicios TI de mesa de ayuda para el cliente Claro Perú, asegurando la atención oportuna de incidencias y requerimientos de aplicaciones empresariales. Coordinación
-                            del equipo de soporte, seguimiento de tickets, Elaboración de informes, control de SLA y mejora continua de los procesos de soporte y operación.</li>
-                    </ul>
-                </div>
-                <div class="job">
-                    <h3 class="job-title">Analista de Sistemas Informáticos</h3>
-                    <p class="job-company">COSAPI DATA (CORPORACIÓN SAPIA) | Cliente: América Móvil Perú SAC </p>
-                    <span class="job-date">abril 2014 - enero 2017</span>
-                    <ul class="job-responsibilities">
-                        <li>Gestión y supervisión del servicio de mesa de ayuda, asegurando la correcta atención de incidencias y requerimientos, el cumplimiento de los niveles de servicio 
-                            (SLA) y la calidad en la atención a los usuarios. Coordinación del equipo de soporte, seguimiento de tickets y mejora continua de los procesos operativos.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Education Section -->
-    <section id="education" class="section">
-        <div class="container">
-            <h2 class="section-title">Educación</h2>
-            <div class="education-grid">
-                <div class="education-item">
-                    <h3 class="education-degree">Ingeniería de Sistemas e Informática</h3>
-                    <p class="education-institution">Universidad Tecnológica del Perú</p>
-                    <span class="education-date">Titulado</span>
-                </div>
-                <div class="education-item">
-                    <h3 class="education-degree">Computación Informática y Sistemas</h3>
-                    <p class="education-institution">GRUPO IDAT</p>
-                    <span class="education-date">Graduado (Técnico)</span>
-                </div>
+            <div class="container hero-stats">
+                <div class="stat"><strong>10+</strong><span>Años en TI</span></div>
+                <div class="stat"><strong>Multi-Cloud</strong><span>Azure · AWS · Huawei · OCI</span></div>
+                <div class="stat"><strong>Pre-Sales</strong><span>Arquitectura y consultoría</span></div>
+                <div class="stat"><strong>FinOps</strong><span>Optimización de costos</span></div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Acreditaciones Profesionales -->
-<section id="acreditaciones" class="section">
-    <div class="container">
-        <h2 class="section-title">Acreditaciones Profesionales</h2>
+        <!-- PROFILE -->
+        <section class="section section-light" id="about">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span class="section-kicker">01 / PERFIL</span>
+                    <h2>Experiencia técnica con <span>visión de negocio.</span></h2>
+                </div>
 
-        <div class="accreditations-grid">
-            <div class="accreditation-item">
-                <h3>Colegio de Ingenieros del Perú (CIP)</h3>
-                <p class="accreditation-role">Ingeniero de Sistemas e Informática</p>
-                <p class="accreditation-status">Numero CIP:404396</p>
- 
-            </div>
-        </div>
-    </div>
-</section>
-    <!-- Certifications Section -->
-    <section id="certifications" class="section">
-        <div class="container">
-            <h2 class="section-title">Certificaciones</h2>
-            <div class="cert-provider-block">
-            <h3 class="cert-provider">Microsoft</h3>  
-            <div class="certifications-grid">
-                <div class="certification-item">
-                    <h3 class="certification-name">SC-500: Cloud and AI Security Engineer Associate</h3>
-                    <a href="https://learn.microsoft.com/en-us/credentials/certifications/cloud-and-ai-security-engineer-associate/?practice-assessment-type=certification" 
-                   class="credential-link" 
-                   target="_blank">Proximamente</a>
-                </div>
-                <div class="certification-item">
-                    <h3 class="certification-name">AZ-305: Azure Solutions Architect Expert</h3>
-                    <a href="https://learn.microsoft.com/en-us/credentials/certifications/exams/az-305/" 
-                   class="credential-link" 
-                   target="_blank">Proximamente</a>
-                </div>
-                <div class="certification-item">
-                    <h3 class="certification-name">AZ-104: Azure Administrator Associate</h3>
-                    <a href="https://learn.microsoft.com/api/credentials/share/es-mx/ElmerMoreno/A1FB1DD4A08888C2?sharingId=121CD979E02EC18F" 
-                   class="credential-link" 
-                   target="_blank">Ver Credencial</a>
-                </div>
-                <div class="certification-item">
-                    <h3 class="certification-name">AZ-700: Azure Network Engineer Associate</h3>
-                    <a href="https://learn.microsoft.com/api/credentials/share/es-mx/ElmerMoreno/D777B4BB4AD6DDE9?sharingId=121CD979E02EC18F" 
-                   class="credential-link" 
-                   target="_blank">Ver Credencial</a>
-                </div>
-                <div class="certification-item">
-                    <h3 class="certification-name">SC-300: Identity and Access Administrator</h3>
-                    <a href="https://learn.microsoft.com/api/credentials/share/es-mx/ElmerMoreno/25AF42B4F7C14603?sharingId=121CD979E02EC18F" 
-                   class="credential-link" 
-                   target="_blank">Ver Credencial</a>
-                </div>
-                <div class="certification-item">
-                    <h3 class="certification-name">SC-900: Security, Compliance Fundamentals</h3>
-                    <a href="https://learn.microsoft.com/api/credentials/share/es-mx/ElmerMoreno/CBEF4B23AD4C441A?sharingId=121CD979E02EC18F" 
-                   class="credential-link" 
-                   target="_blank">Ver Credencial</a>
-                </div>
-                <div class="certification-item">
-                    <h3 class="certification-name">DP-900: Azure Data Fundamentals</h3>
-                    <a href="https://learn.microsoft.com/api/credentials/share/es-mx/ElmerMoreno/E5B6DBBF0B8C971E?sharingId=121CD979E02EC18F" 
-                   class="credential-link" 
-                   target="_blank">Ver Credencial</a>
-                </div>
-                <div class="certification-item">
-                    <h3 class="certification-name">AZ-900: Azure Fundamentals</h3>
-                    <a href="https://learn.microsoft.com/api/credentials/share/es-mx/ElmerMoreno/F8430FD595BFBE6F?sharingId=121CD979E02EC18F" 
-                   class="credential-link" 
-                   target="_blank">Ver Credencial</a>
-                </div>
-                <div class="certification-item">
-                    <h3 class="certification-name">MS-900: Microsoft 365 Fundamentals</h3>
-                    <a href="https://learn.microsoft.com/api/credentials/share/es-mx/ElmerMoreno/672C726B2ED58333?sharingId=121CD979E02EC18F" 
-                   class="credential-link" 
-                   target="_blank">Ver Credencial</a>
-                </div>
-            </div>
-        </div>      
-            <div class="cert-provider-block">    
-            <h3 class="cert-provider">Oracle Cloud Infrastructure (OCI)</h3>
-            <div class="certifications-grid">
-                    <div class="certification-item">
-                            <h3 class="certification-name">Oracle Cloud Infrastructure 2025 Certified Architect Associate</h3>
-                            <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=CB3D1B1791D60139D1F6E862F6D3A88E59EE88A2B6EA074D96E8CABF6E98F082"
-                            class="credential-link"
-                            target="_blank">Ver Credencial</a>
-                        </div>
-                    <div class="certification-item">
-                            <h3 class="certification-name">Oracle Cloud Infrastructure 2025 Certified Developer Professional</h3>
-                            <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=5BA991ADB71DD824D743943B9939A5A08056399EDFC264800F2706B939D85BBA"
-                            class="credential-link"
-                            target="_blank">Ver Credencial</a>
-                        </div>
-                    <div class="certification-item">
-                            <h3 class="certification-name">Oracle Cloud Infrastructure 2025 Certified DevOps Professional</h3>
-                            <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=E9C375A06EC2E2794A99F08AC7C586623B36444A9EB4222994E6010B2613DE2C"
-                            class="credential-link"
-                            target="_blank">Ver Credencial</a>
-                        </div>
-                    <div class="certification-item">
-                            <h3 class="certification-name">Oracle Cloud Infrastructure 2025 Certified Observability Professional</h3>
-                            <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=B39E313488BC22CE617949B6BC1072D198F24E682CF32E41FDEF476BC58FC5DA"
-                            class="credential-link"
-                            target="_blank">Ver Credencial</a>
-                        </div>
-                    <div class="certification-item">
-                            <h3 class="certification-name">Oracle Data Platform 2025 Certified Foundations Associate</h3>
-                            <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=E9C375A06EC2E2794A99F08AC7C58662F91D62697E6190FD9594851C1BBBAE43"
-                            class="credential-link"
-                            target="_blank">Ver Credencial</a>
-                        </div>
-                    <div class="certification-item">
-                            <h3 class="certification-name">Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate</h3>
-                            <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=7D3CE3F386327DE5C020B93269B4E48B9303D3EB3CE1A3A343C4AEDE8448FDA9"
-                            class="credential-link"
-                            target="_blank">Ver Credencial</a>
-                        </div>
-                    <div class="certification-item">
-                            <h3 class="certification-name">Oracle Cloud Infrastructure 2025 Certified Foundations Associate</h3>
-                            <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=D935C19B64A2FC39300B113F37634CB6D4FA2935F75A8BC967E85EF1C34C367E"
-                            class="credential-link"
-                            target="_blank">Ver Credencial</a>
-                        </div>
+                <div class="profile-grid">
+                    <div class="profile-copy reveal">
+                        <p class="lead">
+                            Ingeniero Titulado y colegiado en Ingeniería de Sistemas e Informática, con
+                            especialización en arquitecturas cloud y transformación digital.
+                        </p>
+                        <p>
+                            Mi experiencia combina diseño, implementación, soporte especializado y preventa
+                            de soluciones tecnológicas. Trabajo con organizaciones en su evolución digital,
+                            buscando alinear capacidades tecnológicas con objetivos de negocio.
+                        </p>
+                        <p>
+                            Mi enfoque está orientado a resultados: escalabilidad, eficiencia operacional,
+                            seguridad, continuidad y optimización del uso de recursos.
+                        </p>
+                        <blockquote>
+                            “La tecnología debe ser un habilitador estratégico, no un obstáculo”
+                        </blockquote>
                     </div>
-                </div> 
 
-            <div class="cert-provider-block">    
-            <h3 class="cert-provider">HUAWEI CLOUD</h3>
-            <div class="certifications-grid">
-                    <div class="certification-item">
-                            <h3 class="certification-name">Huawei Developer Professional – HCCDP Solution Architectures</h3>
-                            <a href="https://lnkd.in/p/da4SXSzB"
-                            class="credential-link"
-                            target="_blank">Ver Credencial</a>
+                    <div class="profile-highlights reveal reveal-delay">
+                        <div class="highlight">
+                            <span class="highlight-icon"><i class="fa-solid fa-compass-drafting"></i></span>
+                            <div><strong>Arquitectura</strong><p>Diseño de soluciones Cloud, Multi-Cloud y Data Center.</p></div>
                         </div>
-                    <div class="certification-item">
-                            <h3 class="certification-name">Huawei Cloud Developer Certification – HCCDA Tech Essentials</h3>
-                            <a href="https://lnkd.in/p/dfHCqqr9"
-                            class="credential-link"
-                            target="_blank">Ver Credencial</a>
+                        <div class="highlight">
+                            <span class="highlight-icon"><i class="fa-solid fa-handshake"></i></span>
+                            <div><strong>Pre-Sales</strong><p>Propuestas técnico-comerciales, PoC y acompañamiento consultivo.</p></div>
                         </div>
-                    </div>
-                </div>                 
-
-            <div class="cert-provider-block">  
-            <h3 class="cert-provider">Networking & Security</h3>
-            <div class="certifications-grid">
-                <div class="certification-item">
-                        <h3 class="certification-name">Introduction to Cybersecurity</h3>
-                        <p class="certification-issuer">CISCO</p>
-                        <a href="https://www.credly.com/badges/628b0e40-e4cc-4f4c-8d5f-a10d8970d711" 
-                        class="credential-link" 
-                        target="_blank">Ver Credencial</a>
-                    </div>  
-                <div class="certification-item">
-                        <h3 class="certification-name">CCNA: Introduction to Networks</h3>
-                        <p class="certification-issuer">CISCO</p>
-                        <a href="https://www.credly.com/badges/28bed7f8-831b-4e3e-9ffb-3b4e1c7b3ba9" 
-                        class="credential-link" 
-                        target="_blank">Ver Credencial</a>
-                    </div>
-                <div class="certification-item">
-                        <h3 class="certification-name">CCNA: Switching, Routing, and Wireless Essentials</h3>
-                        <p class="certification-issuer">CISCO</p>
-                        <a href="https://www.credly.com/badges/500366d9-7844-4ec6-b2ee-39f376c2a473" 
-                        class="credential-link" 
-                        target="_blank">Ver Credencial</a>
+                        <div class="highlight">
+                            <span class="highlight-icon"><i class="fa-solid fa-chart-line"></i></span>
+                            <div><strong>Optimización</strong><p>FinOps, eficiencia operacional y mejora continua.</p></div>
+                        </div>
+                        <div class="highlight">
+                            <span class="highlight-icon"><i class="fa-solid fa-shield-halved"></i></span>
+                            <div><strong>Continuidad</strong><p>Disponibilidad, respaldo, recuperación y operación cloud.</p></div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="cert-provider-block">  
-            <h3 class="cert-provider">Service Management & Agile</h3>
-            <div class="certifications-grid">
-                    <div class="certification-item">
-                        <h3 class="certification-name">ITIL Service Management Foundation</h3>
-                        <p class="certification-issuer">EXIN</p>
-                        <a href="https://app.exeed.pro/holder/badge/60707" 
-                        class="credential-link" 
-                        target="_blank">Ver Credencial</a>
+        </section>
+
+        <!-- EXPERTISE -->
+        <section class="section" id="expertise">
+            <div class="container">
+                <div class="section-heading centered reveal">
+                    <span class="section-kicker">02 / EXPERTISE</span>
+                    <h2>Áreas donde <span>aporto valor.</span></h2>
+                    <p>Una visión integral que combina infraestructura, cloud, datos, operación y consultoría.</p>
+                </div>
+
+                <div class="expertise-grid">
+                    <article class="expertise-card featured reveal">
+                        <div class="card-number">01</div>
+                        <i class="fa-brands fa-microsoft card-icon"></i>
+                        <h3>Microsoft Azure</h3>
+                        <p>IaaS, PaaS, Azure Functions, Logic Apps, API Management, Kubernetes, observabilidad y servicios de datos.</p>
+                        <div class="tags"><span>Azure</span><span>AKS</span><span>Data</span><span>FinOps</span></div>
+                    </article>
+
+                    <article class="expertise-card reveal reveal-delay">
+                        <div class="card-number">02</div>
+                        <i class="fa-solid fa-cloud card-icon"></i>
+                        <h3>Multi-Cloud</h3>
+                        <p>Diseño y evaluación de soluciones en Microsoft Azure, AWS, Huawei Cloud, OCI y VMware.</p>
+                        <div class="tags"><span>AWS</span><span>Huawei</span><span>OCI</span><span>VMware</span></div>
+                    </article>
+
+                    <article class="expertise-card reveal">
+                        <div class="card-number">03</div>
+                        <i class="fa-solid fa-diagram-project card-icon"></i>
+                        <h3>DevOps & Observabilidad</h3>
+                        <p>Kubernetes, Jenkins, Terraform, Grafana, New Relic, Lens y herramientas de monitoreo.</p>
+                        <div class="tags"><span>Kubernetes</span><span>Terraform</span><span>Grafana</span></div>
+                    </article>
+
+                    <article class="expertise-card reveal reveal-delay">
+                        <div class="card-number">04</div>
+                        <i class="fa-solid fa-database card-icon"></i>
+                        <h3>Data & Analytics</h3>
+                        <p>SQL Server, PostgreSQL, MySQL, Cosmos DB, Power BI y análisis de información.</p>
+                        <div class="tags"><span>SQL</span><span>Power BI</span><span>DBA</span></div>
+                    </article>
+
+                    <article class="expertise-card reveal">
+                        <div class="card-number">05</div>
+                        <i class="fa-solid fa-server card-icon"></i>
+                        <h3>Data Center & Virtualización</h3>
+                        <p>Experiencia con VMware, infraestructura on-premise, servidores, redes y operación de Data Center.</p>
+                        <div class="tags"><span>VMware</span><span>On-Premise</span><span>DC</span></div>
+                    </article>
+
+                    <article class="expertise-card reveal reveal-delay">
+                        <div class="card-number">06</div>
+                        <i class="fa-solid fa-headset card-icon"></i>
+                        <h3>ITSM & Soporte</h3>
+                        <p>Continuidad operativa, SLA, soporte N2/N3, Service Desk, Remedy, Aranda y reporting.</p>
+                        <div class="tags"><span>ITSM</span><span>SLA</span><span>N2/N3</span></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section class="section section-dark" id="experience">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span class="section-kicker">03 / TRAYECTORIA</span>
+                    <h2>Experiencia <span>profesional.</span></h2>
+                </div>
+
+                <div class="timeline">
+                    <article class="timeline-item current reveal">
+                        <div class="timeline-marker"><span></span></div>
+                        <div class="timeline-content">
+                            <div class="timeline-meta"><span>Dic. 2024 — Actualidad</span><b>Actual</b></div>
+                            <h3>Especialista Cloud & Data Center <small>· Pre-Sales</small></h3>
+                            <h4>Cliente: CLARO PERÚ</h4>
+                            <p>Asesoría técnica y comercial de soluciones cloud, Multi-Cloud y Data Center.</p>
+                            <ul>
+                                <li>Diseño de arquitecturas Cloud, Multi-Cloud y Data Center.</li>
+                                <li>Propuestas técnicas y comerciales orientadas a valor, viabilidad y ROI.</li>
+                                <li>Migración de infraestructura, aplicaciones y bases de datos mediante arquitecturas IaaS y PaaS.</li>
+                                <li>Pruebas de concepto y validación de soluciones cloud.</li>
+                                <li>Documentación comercial, contractual y capacitación técnica a la fuerza de ventas.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item reveal">
+                        <div class="timeline-marker"><span></span></div>
+                        <div class="timeline-content">
+                            <div class="timeline-meta"><span>Nov. 2023 — Dic. 2024</span></div>
+                            <h3>Cloud Specialist <small>· ISX-System Expert — Engineering</small></h3>
+                            <h4>NTT DATA PERÚ · Telefónica del Perú y Credicorp</h4>
+                            <p>Gestión de infraestructura cloud y continuidad operativa.</p>
+                            <ul>
+                                <li>Gestión de incidentes, cambios y operación Cloud.</li>
+                                <li>Optimización, mejora continua y gestión FinOps.</li>
+                                <li>Monitoreo y observabilidad con Azure, Grafana y New Relic.</li>
+                                <li>Arquitectura cloud, Kubernetes, Functions, Logic Apps y API Management.</li>
+                                <li>Gestión de bases de datos y estrategias de respaldo y recuperación.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item reveal">
+                        <div class="timeline-marker"><span></span></div>
+                        <div class="timeline-content">
+                            <div class="timeline-meta"><span>Abr. 2022 — Nov. 2023</span></div>
+                            <h3>Consultor Preventa Microsoft Cloud</h3>
+                            <h4>NEXSYS DEL PERÚ · Área Microsoft</h4>
+                            <p>Asesoría técnica y comercial de soluciones Microsoft Cloud.</p>
+                            <ul>
+                                <li>Asesoría consultiva en Microsoft Azure y Microsoft 365.</li>
+                                <li>Habilitación técnica a socios comerciales.</li>
+                                <li>PoC, workshops y propuestas técnico-económicas.</li>
+                                <li>Análisis de reportes de facturación Microsoft mediante Power BI.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <details class="older-experience reveal">
+                        <summary>Ver experiencia anterior <i class="fa-solid fa-chevron-down"></i></summary>
+                        <div class="older-grid">
+                            <div><strong>2021 — 2022</strong><h4>Operador de servicios de TI</h4><p>CORPORACIÓN SAPIA / STEFANINI · Cliente Minera Buenaventura</p></div>
+                            <div><strong>2017 — 2020</strong><h4>Supervisor de Soporte de Aplicaciones</h4><p>HITSS PERÚ · Cliente América Móvil Perú</p></div>
+                            <div><strong>2014 — 2017</strong><h4>Analista de Sistemas Informáticos</h4><p>COSAPI DATA / CORPORACIÓN SAPIA · Cliente América Móvil Perú</p></div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- CERTIFICATIONS -->
+        <section class="section section-light" id="certifications">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span class="section-kicker">04 / CREDENCIALES</span>
+                    <h2>Certificaciones y <span>especialización.</span></h2>
+                </div>
+
+                <div class="cert-filter reveal" role="tablist" aria-label="Filtrar certificaciones">
+                    <button class="cert-filter-btn active" data-filter="all">Todas</button>
+                    <button class="cert-filter-btn" data-filter="microsoft">Microsoft</button>
+                    <button class="cert-filter-btn" data-filter="oracle">Oracle</button>
+                    <button class="cert-filter-btn" data-filter="huawei">Huawei</button>
+                    <button class="cert-filter-btn" data-filter="other">Otras</button>
+                </div>
+
+                <div class="cert-grid">
+                    <article class="cert-card" data-provider="microsoft">
+                        <div class="cert-logo microsoft"><i class="fa-brands fa-microsoft"></i></div>
+                        <div><span>Microsoft</span><h3>Azure Solutions Architect Expert</h3><p>AZ-305 · Designing Microsoft Azure Infrastructure Solutions</p></div>
+                        <a href="https://learn.microsoft.com/en-us/credentials/certifications/exams/az-305/" target="_blank" rel="noopener noreferrer" aria-label="Ver AZ-305"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </article>
+
+                    <article class="cert-card" data-provider="microsoft">
+                        <div class="cert-logo microsoft"><i class="fa-brands fa-microsoft"></i></div>
+                        <div><span>Microsoft</span><h3>Azure Administrator Associate</h3><p>AZ-104</p></div>
+                        <a href="https://learn.microsoft.com/api/credentials/share/es-mx/ElmerMoreno/A1FB1DD4A08888C2?sharingId=121CD979E02EC18F" target="_blank" rel="noopener noreferrer" aria-label="Ver credencial"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </article>
+
+                    <article class="cert-card" data-provider="microsoft">
+                        <div class="cert-logo microsoft"><i class="fa-brands fa-microsoft"></i></div>
+                        <div><span>Microsoft</span><h3>Azure Network Engineer Associate</h3><p>AZ-700</p></div>
+                        <a href="https://learn.microsoft.com/api/credentials/share/es-mx/ElmerMoreno/D777B4BB4AD6DDE9?sharingId=121CD979E02EC18F" target="_blank" rel="noopener noreferrer" aria-label="Ver credencial"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </article>
+
+                    <article class="cert-card" data-provider="microsoft">
+                        <div class="cert-logo microsoft"><i class="fa-brands fa-microsoft"></i></div>
+                        <div><span>Microsoft</span><h3>Identity and Access Administrator</h3><p>SC-300</p></div>
+                        <a href="https://learn.microsoft.com/api/credentials/share/es-mx/ElmerMoreno/25AF42B4F7C14603?sharingId=121CD979E02EC18F" target="_blank" rel="noopener noreferrer" aria-label="Ver credencial"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </article>
+
+                    <article class="cert-card" data-provider="microsoft">
+                        <div class="cert-logo microsoft"><i class="fa-brands fa-microsoft"></i></div>
+                        <div><span>Microsoft</span><h3>Security, Compliance Fundamentals</h3><p>SC-900</p></div>
+                        <a href="https://learn.microsoft.com/api/credentials/share/es-mx/ElmerMoreno/CBEF4B23AD4C441A?sharingId=121CD979E02EC18F" target="_blank" rel="noopener noreferrer" aria-label="Ver credencial"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </article>
+
+                    <article class="cert-card" data-provider="microsoft">
+                        <div class="cert-logo microsoft"><i class="fa-brands fa-microsoft"></i></div>
+                        <div><span>Microsoft</span><h3>Azure Data Fundamentals</h3><p>DP-900</p></div>
+                        <a href="https://learn.microsoft.com/api/credentials/share/es-mx/ElmerMoreno/E5B6DBBF0B8C971E?sharingId=121CD979E02EC18F" target="_blank" rel="noopener noreferrer" aria-label="Ver credencial"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </article>
+
+                    <article class="cert-card" data-provider="microsoft">
+                        <div class="cert-logo microsoft"><i class="fa-brands fa-microsoft"></i></div>
+                        <div><span>Microsoft</span><h3>Azure Fundamentals</h3><p>AZ-900</p></div>
+                        <a href="https://learn.microsoft.com/api/credentials/share/es-mx/ElmerMoreno/F8430FD595BFBE6F?sharingId=121CD979E02EC18F" target="_blank" rel="noopener noreferrer" aria-label="Ver credencial"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </article>
+
+                    <article class="cert-card" data-provider="microsoft">
+                        <div class="cert-logo microsoft"><i class="fa-brands fa-microsoft"></i></div>
+                        <div><span>Microsoft</span><h3>Microsoft 365 Fundamentals</h3><p>MS-900</p></div>
+                        <a href="https://learn.microsoft.com/api/credentials/share/es-mx/ElmerMoreno/672C726B2ED58333?sharingId=121CD979E02EC18F" target="_blank" rel="noopener noreferrer" aria-label="Ver credencial"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </article>
+
+                    <article class="cert-card" data-provider="oracle">
+                        <div class="cert-logo oracle"><i class="fa-solid fa-database"></i></div>
+                        <div><span>Oracle Cloud Infrastructure</span><h3>2025 Certified Architect Associate</h3><p>OCI</p></div>
+                        <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=CB3D1B1791D60139D1F6E862F6D3A88E59EE88A2B6EA074D96E8CABF6E98F082" target="_blank" rel="noopener noreferrer" aria-label="Ver credencial"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </article>
+
+                    <article class="cert-card" data-provider="oracle">
+                        <div class="cert-logo oracle"><i class="fa-solid fa-code"></i></div>
+                        <div><span>Oracle Cloud Infrastructure</span><h3>2025 Certified Developer Professional</h3><p>OCI</p></div>
+                        <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=5BA991ADB71DD824D743943B9939A5A08056399EDFC264800F2706B939D85BBA" target="_blank" rel="noopener noreferrer" aria-label="Ver credencial"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </article>
+
+                    <article class="cert-card" data-provider="oracle">
+                        <div class="cert-logo oracle"><i class="fa-solid fa-gears"></i></div>
+                        <div><span>Oracle Cloud Infrastructure</span><h3>2025 Certified DevOps Professional</h3><p>OCI</p></div>
+                        <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=E9C375A06EC2E2794A99F08AC7C586623B36444A9EB4222994E6010B2613DE2C" target="_blank" rel="noopener noreferrer" aria-label="Ver credencial"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </article>
+
+                    <article class="cert-card" data-provider="oracle">
+                        <div class="cert-logo oracle"><i class="fa-solid fa-chart-simple"></i></div>
+                        <div><span>Oracle Cloud Infrastructure</span><h3>2025 Certified Observability Professional</h3><p>OCI</p></div>
+                        <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=B39E313488BC22CE617949B6BC1072D198F24E682CF32E41FDEF476BC58FC5DA" target="_blank" rel="noopener noreferrer" aria-label="Ver credencial"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </article>
+
+                    <article class="cert-card" data-provider="oracle">
+                        <div class="cert-logo oracle"><i class="fa-solid fa-brain"></i></div>
+                        <div><span>Oracle</span><h3>2025 Certified AI Foundations Associate</h3><p>OCI</p></div>
+                        <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=7D3CE3F386327DE5C020B93269B4E48B9303D3EB3CE1A3A343C4AEDE8448FDA9" target="_blank" rel="noopener noreferrer" aria-label="Ver credencial"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </article>
+
+                    <article class="cert-card" data-provider="oracle">
+                        <div class="cert-logo oracle"><i class="fa-solid fa-layer-group"></i></div>
+                        <div><span>Oracle Data Platform</span><h3>2025 Certified Foundations Associate</h3><p>Data Platform</p></div>
+                        <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=E9C375A06EC2E2794A99F08AC7C58662F91D62697E6190FD9594851C1BBBAE43" target="_blank" rel="noopener noreferrer" aria-label="Ver credencial"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </article>
+
+                    <article class="cert-card" data-provider="oracle">
+                        <div class="cert-logo oracle"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <div><span>Oracle Cloud Infrastructure</span><h3>2025 Certified Foundations Associate</h3><p>OCI</p></div>
+                        <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=D935C19B64A2FC39300B113F37634CB6D4FA2935F75A8BC967E85EF1C34C367E" target="_blank" rel="noopener noreferrer" aria-label="Ver credencial"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </article>
+
+                    <article class="cert-card" data-provider="huawei">
+                        <div class="cert-logo huawei"><i class="fa-solid fa-cloud"></i></div>
+                        <div><span>Huawei Cloud</span><h3>HCCDP — Solution Architectures</h3><p>Huawei Developer Professional</p></div>
+                        <a href="https://lnkd.in/p/da4SXSzB" target="_blank" rel="noopener noreferrer" aria-label="Ver credencial"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </article>
+
+                    <article class="cert-card" data-provider="huawei">
+                        <div class="cert-logo huawei"><i class="fa-solid fa-cloud"></i></div>
+                        <div><span>Huawei Cloud</span><h3>HCCDA — Tech Essentials</h3><p>Huawei Cloud Developer Certification</p></div>
+                        <a href="https://lnkd.in/p/dfHCqqr9" target="_blank" rel="noopener noreferrer" aria-label="Ver credencial"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </article>
+
+                    <article class="cert-card" data-provider="other">
+                        <div class="cert-logo other"><i class="fa-solid fa-shield-halved"></i></div>
+                        <div><span>CISCO</span><h3>Introduction to Cybersecurity</h3><p>Networking & Security</p></div>
+                        <a href="https://www.credly.com/badges/628b0e40-e4cc-4f4c-8d5f-a10d8970d711" target="_blank" rel="noopener noreferrer" aria-label="Ver credencial"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </article>
+
+                    <article class="cert-card" data-provider="other">
+                        <div class="cert-logo other"><i class="fa-solid fa-network-wired"></i></div>
+                        <div><span>CISCO</span><h3>CCNA: Introduction to Networks</h3><p>Networking & Security</p></div>
+                        <a href="https://www.credly.com/badges/28bed7f8-831b-4e3e-9ffb-3b4e1c7b3ba9" target="_blank" rel="noopener noreferrer" aria-label="Ver credencial"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </article>
+
+                    <article class="cert-card" data-provider="other">
+                        <div class="cert-logo other"><i class="fa-solid fa-network-wired"></i></div>
+                        <div><span>CISCO</span><h3>CCNA: Switching, Routing & Wireless</h3><p>Networking & Security</p></div>
+                        <a href="https://www.credly.com/badges/500366d9-7844-4ec6-b2ee-39f376c2a473" target="_blank" rel="noopener noreferrer" aria-label="Ver credencial"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </article>
+
+                    <article class="cert-card" data-provider="other">
+                        <div class="cert-logo other"><i class="fa-solid fa-list-check"></i></div>
+                        <div><span>EXIN</span><h3>ITIL Service Management Foundation</h3><p>Service Management</p></div>
+                        <a href="https://app.exeed.pro/holder/badge/60707" target="_blank" rel="noopener noreferrer" aria-label="Ver credencial"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </article>
+
+                    <article class="cert-card" data-provider="other">
+                        <div class="cert-logo other"><i class="fa-solid fa-people-group"></i></div>
+                        <div><span>Certiprof</span><h3>Scrum Foundation Professional</h3><p>SFPC™</p></div>
+                        <a href="https://certiprof.com/es/products/scrum-foundation-certificacion-sfpc" target="_blank" rel="noopener noreferrer" aria-label="Ver certificación"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </article>
+
+                    <article class="cert-card" data-provider="other">
+                        <div class="cert-logo other"><i class="fa-solid fa-diagram-project"></i></div>
+                        <div><span>NETCRAM & CIP</span><h3>Gestión de Proyectos</h3><p>Basado en PMBOK 8va Edición</p></div>
+                        <a href="https://netcram.com/certificados/?search=46560838" target="_blank" rel="noopener noreferrer" aria-label="Ver credencial"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section class="section" id="education">
+            <div class="container">
+                <div class="section-heading centered reveal">
+                    <span class="section-kicker">05 / FORMACIÓN</span>
+                    <h2>Formación <span>académica.</span></h2>
+                </div>
+
+                <div class="education-grid">
+                    <article class="education-card reveal">
+                        <div class="education-year">TITULADO</div>
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <h3>Ingeniería de Sistemas e Informática</h3>
+                        <p>Universidad Tecnológica del Perú</p>
+                    </article>
+                    <article class="education-card reveal reveal-delay">
+                        <div class="education-year">TÉCNICO</div>
+                        <i class="fa-solid fa-laptop-code"></i>
+                        <h3>Computación Informática y Sistemas</h3>
+                        <p>GRUPO IDAT</p>
+                    </article>
+                </div>
+
+                <div class="training reveal">
+                    <div>
+                        <span class="section-kicker">TALLERES</span>
+                        <h3>Formación complementaria</h3>
                     </div>
-                <div class="certification-item">
-                        <h3 class="certification-name">Certificación Profesional de Scrum Foundation - SFPC™</h3>
-                        <p class="certification-issuer">Certiprof</p>
-                        <a href="https://certiprof.com/es/products/scrum-foundation-certificacion-sfpc" 
-                        class="credential-link"
-                        target="_blank">Ver Credencial</a>
-                    </div>
-                <div class="certification-item">
-                        <h3 class="certification-name">Gestión de Proyectos Basado en el PMBOK 8va Edición</h3>
-                        <p class="certification-issuer">NETCRAM & CIP</p>
-                        <a href="https://netcram.com/certificados/?search=46560838" 
-                        class="credential-link" 
-                        target="_blank">Ver Credencial</a>
+                    <div class="training-list">
+                        <span>PL-300 Power BI Data Analyst</span>
+                        <span>DP-300 Azure Database Administrator</span>
+                        <span>AZ-500 Azure Security Technologies</span>
+                        <span>AZ-305 Azure Infrastructure Solutions</span>
+                        <span>Microsoft 365</span>
+                        <span>ISO 27001</span>
+                        <span>BPM</span>
+                        <span>Kubernetes</span>
+                        <span>AWS Cloud Practitioner</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title">Contacto</h2>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <div class="contact-text">
-                        <h3>Email</h3>
-                        <a href="mailto:emoreno.marchena@outlook.com">emoreno.marchena@outlook.com</a>
-                    </div>
+        <!-- CONTACT -->
+        <section class="section contact-section" id="contact">
+            <div class="container contact-box reveal">
+                <div class="contact-copy">
+                    <span class="section-kicker">06 / CONTACTO</span>
+                    <h2>¿Hablamos de tu <span>próximo proyecto?</span></h2>
+                    <p>Disponible para conversaciones sobre arquitectura cloud, preventa, transformación digital y soluciones de infraestructura.</p>
                 </div>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <div class="contact-text">
-                        <h3>Teléfono</h3>
-                        <a href="tel:+51930163420">+51 930163420</a>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fab fa-linkedin"></i>
-                    </div>
-                    <div class="contact-text">
-                        <h3>LinkedIn</h3>
-                        <a href="https://www.linkedin.com/in/elmermoreno" target="_blank">linkedin.com/in/elmermoreno</a>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fab fa-microsoft"></i>
-                    </div>
-                    <div class="contact-text">
-                        <h3>Microsoft Learn</h3>
-                        <a href="https://learn.microsoft.com/es-es/users/elmermoreno/" target="_blank">Perfil Microsoft</a>
-                    </div>
-                </div>
+                <div class="contact-actions">
+                    <a class="contact-link" href="mailto:emoreno.marchena@outlook.com"><i class="fa-solid fa-envelope"></i><span>emoreno.marchena@outlook.com</span></a>
+                    <a class="contact-link" href="tel:+51930163420"><i class="fa-solid fa-phone"></i><span>+51 930 163 420</span></a>
+                    <a class="contact-link" href="https://www.linkedin.com/in/elmermoreno" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i><span>linkedin.com/in/elmermoreno</span></a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer -->
     <footer>
-        <div class="container">
-            <p class="footer-text">© 2026 Elmer Moreno Marchena. Todos los derechos reservados.</p>
+        <div class="container footer-wrap">
+            <span>© 2026 Elmer Moreno Marchena</span>
+            <a href="#top">Volver arriba <i class="fa-solid fa-arrow-up"></i></a>
         </div>
     </footer>
 
-    <script>
-        // Tab functionality
-        const tabBtns = document.querySelectorAll('.tab-btn');
-        const tabContents = document.querySelectorAll('.tab-content');
-        
-        tabBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // Remove active class from all buttons and contents
-                tabBtns.forEach(btn => btn.classList.remove('active'));
-                tabContents.forEach(content => content.classList.remove('active'));
-                
-                // Add active class to clicked button and corresponding content
-                btn.classList.add('active');
-                const tabId = btn.getAttribute('data-tab');
-                document.getElementById(tabId).classList.add('active');
-            });
-        });
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                const HEADER_HEIGHT = 100;
-                window.scrollTo({
-                    top: targetElement.offsetTop - HEADER_HEIGHT,
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>
